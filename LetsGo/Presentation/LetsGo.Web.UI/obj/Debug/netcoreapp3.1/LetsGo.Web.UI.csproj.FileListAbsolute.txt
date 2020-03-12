@@ -1,0 +1,144 @@
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.exe
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.deps.json
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.json
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.dev.json
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.dll
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csprojAssemblyReference.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.Manifest.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.xml
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfoInputs.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfo.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.input.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.output.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorCoreGenerate.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cache
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cs
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csproj.CopyComplete
+C:\Users\mathe\source\repos\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\NovoDestino.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.exe
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.deps.json
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.json
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.dev.json
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.dll
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csprojAssemblyReference.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.Manifest.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.xml
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfoInputs.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfo.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.input.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.output.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorCoreGenerate.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\NovoRestaurante.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cache
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cs
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mmota\Desktop\TCC\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csproj.CopyComplete
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.exe
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.deps.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.dev.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.dll
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csprojAssemblyReference.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.Manifest.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.xml
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfoInputs.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfo.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.input.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.output.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorCoreGenerate.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\NovoRestaurante.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csproj.CopyComplete
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.exe
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.deps.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.runtimeconfig.dev.json
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.dll
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csprojAssemblyReference.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.Manifest.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.xml
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfoInputs.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfo.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.input.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.TagHelpers.output.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorCoreGenerate.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\NovoRestaurante.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cache
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorTargetAssemblyInfo.cs
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
+C:\Users\mathe\Downloads\LetsGo.Web.UI (1)\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csproj.CopyComplete

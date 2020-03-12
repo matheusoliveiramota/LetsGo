@@ -1,0 +1,242 @@
+﻿@charset
+
+="utf-8"; body {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #f2f2f2;
+}
+
+header div.apresentacao {
+    padding-top: 1%;
+    width: 100%;
+}
+
+img#aviao4travel {
+    width: 40%;
+    display: run-in;
+}
+
+nav div.nav-wrapper {
+    background-color: rgb(4,116,143);
+    width: 100%;
+    padding-bottom: 2%;
+    text-shadow: initial;
+}
+
+h2.titulo{
+    font-family: 'Freestyle Script';
+    text-align:center;
+    padding-bottom: 2%;
+}
+span#intercambioTitle{
+    font-weight:bolder;
+}
+
+label.novoDestinoPais {
+    color: rgb(4,116,143);
+    font-size: 21px;
+    padding-top:30px;
+    padding-left: 0px;
+}
+
+label.novoDestinoEstadoCidade {
+    color: rgb(4,116,143);
+    font-size: 21px;
+    padding-top: 30px;
+    padding-left: 15px;
+}
+
+div.selectPaises {
+    padding-left: 10px;
+    padding-right: 60%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+div.textoDescricao {
+    padding-left: 15px;
+    padding-right: 10%;
+    padding-bottom: 15px;
+}
+
+div.textoEstadoCidade {
+    padding-left: 15px;
+    padding-right: 50%;
+    padding-bottom: 15px;
+}
+div.botaoEnviar {
+    padding-left:1%;
+}
+
+#breadcrumb {
+    text-align: center;
+    padding: 10px;
+}
+
+nav div.caminho {
+    background-color: rgb(4,116,143);
+    padding-left: 45px;
+    box-shadow: none;
+}
+
+.canvas-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav div ul.right-hide-on-med-and-down {
+    padding-bottom: 5%;
+}
+
+div.imagem {
+    padding-left:3%;
+    padding-right:61%;
+    padding-bottom: 30px;
+}
+
+div.cartao {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 2%;
+    height: 50%;
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+/* Placeholder - Input */
+::-ms-input-placeholder { /* Microsoft Edge*/
+    color: darkcyan;
+    font-style: italic;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: darkcyan;
+    font-style: italic;
+    opacity:8;
+}
+
+/*AVIÃO SOBRE A NAV*/
+@media (max-width: 755px ) {
+    div.cartÃ£o {
+        display: block;
+        justify-content: space-between;
+        height: 50px;
+        width: 100px;
+    }
+    /*Esconder Texto: Tentativa de Centralizar o Logo*/
+    nav div ul.left-hide-on-med-and-down {
+        display: none;
+        text-align: center;
+    }
+
+    nav div.nav-wrapper {
+        text-align: center;
+    }
+}
+
+div p.paragrafo {
+    padding-left: 1%;
+    position: relative;
+    float: right;
+    text-align: justify;
+    font-size: 18px;
+}
+
+h6.pros {
+    font-size: 25px;
+    color: darkgreen;
+    padding-top: 20px;
+}
+h6.contras {
+    font-size: 25px;
+    color: red;
+}
+span.proscontras {
+    padding-left: 1%;
+    position: relative;
+    float: right;
+    text-align: justify;
+    font-size: 18px;
+    padding-bottom: 8px;
+}
+
+/* IMAGENS DESTINOS*/
+section img.responsive-img {
+    width: 200%;
+    padding-top: 2%;
+    padding-bottom: 8%;
+    padding-right: 2%;
+    padding-left: 2%;
+    opacity: 1;
+    -moz-opacity: 0.5;
+    Filter: Alpha(Opacity=90)
+}
+
+section img.responsive-img:hover {
+        opacity: 0.5;
+        -moz-opacity: 1.0;
+        Filter: Alpha(Opacity=100)
+}
+
+figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 6% solid #ffffff;
+    box-shadow: 2% 2% 2% #000000;
+    margin: 3%;
+    padding: 0;
+}
+
+figcaption {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 130%;
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+
+figcaption:hover {
+    width: 100% height: 110%;
+    opacity: 0;
+    transition: opacity 1.5s;
+    padding: 2%;
+    padding-bottom: 2%;
+}
+
+img.responsive-img {
+    width: 300%;
+    height: 90%;
+    position: justify;
+    margin: 0%;
+    padding-right: 2%;
+    opacity: 0.2;
+    padding-bottom: 4%;
+}
+
+/* TEXTOS */
+h4.titulos {
+    text-align: justify;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+section p.textos-imagens {
+    text-align: justify;
+    padding-left: 2%;
+    padding-right: 1%;
+}
+
+
+footer.page-footer {
+    background-color: rgb(4,116,143);
+}

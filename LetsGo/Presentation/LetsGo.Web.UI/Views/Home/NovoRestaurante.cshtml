@@ -1,0 +1,85 @@
+﻿@model LetsGo.Web.UI.Models.Restaurante
+
+@{
+    ViewBag.Title = "Novo Restaurante";
+}
+
+<img id="banner" src="~/Midia/novolugar.jpg" style="width: 100%;"/>
+
+<nav>
+    <div class="caminho">
+        <div class="col s12">
+            @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
+            @Html.ActionLink("Novo Restaurante", "NovoRestaurante", "Home", new { area = "" }, new { @class = "breadcrumb" })
+        </div>
+    </div>
+
+</nav>
+
+<form action="/Home/AdicionarRestaurante" method="post" enctype="multipart/form-data">
+    <!-- NOME -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">Nome</label>
+        <div class="textoEstadoCidade">
+            <input placeholder="Digite o nome do Restaurante" name="Nome" type="text" class="validate" required>
+        </div>
+    </div>
+    <!-- ENDEREÇO -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">Endereço</label>
+        <div class="textoEstadoCidade">
+            <input placeholder="Digite o nome da Rua/Avenida/Logradouro" name="Endereco" type="text" class="validate" required>
+        </div>
+    </div>
+    <!-- BAIRRO -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">Bairro</label>
+        <div class="textoEstadoCidade">
+            <input placeholder="Digite o nome do Bairro" name="Bairro" type="text" class="validate" required>
+        </div>
+    </div>
+
+    <!-- AUTOR -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">CEP</label>
+        <div class="textoEstadoCidade">
+            <input placeholder="Digite o CEP" name="Cep" type="text" class="validate" required>
+        </div>
+    </div>
+
+    <!-- NÚMERO -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">Número</label>
+        <div class="textoEstadoCidade">
+            <input placeholder="Digite o Número" name="Numero" type="text" class="validate" required>
+        </div>
+    </div>
+
+    <!-- IMAGEM -->
+    <div class="imagem">
+        <div class="row">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>IMAGEM</span>
+                    <input type="file" name="Imagem" />
+                </div>
+
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text"
+                           placeholder="Adicione um logo" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="botaoEnviar">
+        <button type="submit" class="waves-effect waves-light btn green accent-3"><i class="material-icons right">check_circle</i>Salvar Restaurante</button>
+    </div>
+</form>
+<!-- AREA PARA JAVASCRIPT -->
+@section JS {
+    <script type="text/javascript"
+        src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+}

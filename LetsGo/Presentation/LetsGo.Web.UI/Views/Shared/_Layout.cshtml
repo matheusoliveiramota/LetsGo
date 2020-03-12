@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Segregados TI" />
+    <meta name="keywords" content="Destinos, Indicações, Intercâmbio" />
+    <meta name="description" content="Indicações De Viagens" />
+
+    <title>4TRAVEL - @ViewBag.Title</title>
+    <link rel="shortcut icon" href="~/Midia/aviao4travel.ico" type="image/x-icon" />
+
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="~/Content/materialize/css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection" />
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS PADRÃO: NAV, LOGO E FOOTER-->
+    <link href="~/css/layout.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a class="brand-logo right" href='@Url.Action("Index", "Home")'>
+                <img id="aviao4travel" src='@Url.Content("~/Midia/aviao4travel.png")' />
+            </a>
+            <ul class="left-hide-on-med-and-down">
+                @Html.ActionLink("Home", "Index", "Home")
+
+                @Html.ActionLink("Novo Restaurante", "AdicionarRestaurante", "Home")
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container body-content">
+
+        @RenderBody()
+
+        <!-- SCRIPTS: (SLIDER E GIFS)-->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">4Travel</h5>
+                        <p class="grey-text text-lighten-4">Tire suas dúvidas e veja dicas, no nosso site!</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Home", "Index", "Home", new { @class = "grey-text text-lighten-3" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("Novo Destino", "NovoDestino", "Home", new { @class = "grey-text text-lighten-3" })
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    TCC 2020  © Todos os Direitos Reservados
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- js -->
+    @RenderSection("JS", false)
+</body>
+</html>
