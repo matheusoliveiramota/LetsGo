@@ -336,67 +336,65 @@ window.addEventListener("load", function (event) {
 
 
 
-$.ajax({
-    type: "POST",
-    url: '/Usuario/GetAcessosByHotel',
-    dataType: 'json',
-    data: { usuarioId: $("#CodUsuario").val(), hoteis: hoteisAcesso },
-    success: function (result) {
-        if (result != null) {
-            if (result.Data[0].length > 0 && hoteisAcesso != "") {
-                $("#divAcessos").show()
-            }
-            //else {
-            //    $("#divAcessos").hide()
-            //}
-            result.Data[0].forEach(function (item) {
-                opts = opts + '<option value="' + item.Id + '" data-codHotel="' + item.CodHotel + '">' + item.Nome + '</option>'
-            });
-            //if (hoteisAcesso != "") {
-            acessos.forEach(function (itemAcesso) {
-                var removerAcesso = true;
-                console.log(acessos)
-                console.log(result.Data[0])
-                if (result.Data[0].length > 0) {
-                    result.Data[0].forEach(function (itemAcessoHotel) {
-                        if (itemAcesso.Id == itemAcessoHotel.Id || itemAcesso.CodHotel == 0)
-                            removerAcesso = false
-                    })
-                    if (removerAcesso)
-                        $("#btnRemove_" + itemAcesso.Id).click();
-                } else {
-                    $(".btnRemove").click()
-                }
-            })
-            //}
-        }
-        $("#Acesso").html("");
-        $("#Acesso").append(opts);
-    },
-    error: function (xhr, ajaxOptions, thrownError) {
-        console.log(xhr);
-        console.log(thrownError);
-    }
+//$.ajax({
+//    type: "POST",
+//    url: '/Usuario/GetAcessosByHotel',
+//    dataType: 'json',
+//    data: { usuarioId: $("#CodUsuario").val(), hoteis: hoteisAcesso },
+//    success: function (result) {
+//        if (result != null) {
+//            if (result.Data[0].length > 0 && hoteisAcesso != "") {
+//                $("#divAcessos").show()
+//            }
+//            //else {
+//            //    $("#divAcessos").hide()
+//            //}
+//            result.Data[0].forEach(function (item) {
+//                opts = opts + '<option value="' + item.Id + '" data-codHotel="' + item.CodHotel + '">' + item.Nome + '</option>'
+//            });
+//            //if (hoteisAcesso != "") {
+//            acessos.forEach(function (itemAcesso) {
+//                var removerAcesso = true;
+//                console.log(acessos)
+//                console.log(result.Data[0])
+//                if (result.Data[0].length > 0) {
+//                    result.Data[0].forEach(function (itemAcessoHotel) {
+//                        if (itemAcesso.Id == itemAcessoHotel.Id || itemAcesso.CodHotel == 0)
+//                            removerAcesso = false
+//                    })
+//                    if (removerAcesso)
+//                        $("#btnRemove_" + itemAcesso.Id).click();
+//                } else {
+//                    $(".btnRemove").click()
+//                }
+//            })
+//            //}
+//        }
+//        $("#Acesso").html("");
+//        $("#Acesso").append(opts);
+//    },
+//    error: function (xhr, ajaxOptions, thrownError) {
+//        console.log(xhr);
+//        console.log(thrownError);
+//    }
 
-});
-[Route("GetAcessosByHotel")]
-[HttpPost]
-[ResponseType(typeof (Response<List<Acesso>>))]
-    //[App_Start.CustomActionAuthorize(false)]
-    public HttpResponseMessage GetAcessosByHotel([FromBody] string hoteis)
-        {
-        try
-            {
-            var response = _manager.GetAcessosByHotel(hoteis);
-            return base.ReturnResponseGet(response);
-        }
-            catch(Exception ex) {
-            this.log.Error(ex.Message);
-            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
-        }
-    }
-
-
+//});
+//[Route("GetAcessosByHotel")]
+//[HttpPost]
+//[ResponseType(typeof (Response<List<Acesso>>))]
+//    //[App_Start.CustomActionAuthorize(false)]
+//    public HttpResponseMessage GetAcessosByHotel([FromBody] string hoteis)
+//        {
+//        try
+//            {
+//            var response = _manager.GetAcessosByHotel(hoteis);
+//            return base.ReturnResponseGet(response);
+//        }
+//            catch(Exception ex) {
+//            this.log.Error(ex.Message);
+//            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex.Message);
+//        }
+//    }
 
 
 
@@ -409,44 +407,46 @@ $.ajax({
 
 
 
-$.ajax({
-    type: "GET",
-    url: '/Hotel/GetHoteisByUsuarioId',
-    dataType: 'json',
-    data: { id: $("#CodUsuario").val() },
-    success: function (result) {
-        exibeHoteis(result.Data[0]);
-        $.each(result.Data[0], function (i, item) {
-            userHoteis.push(item);
-            $.each(hoteis, function (j, hotel) {
-                if (hotel != null && item.CodHotel == hotel.id) {
-                    hoteis.splice(j, 1)
-                }
-            })
-        })
-        $('#Hotel').typeahead({
-            source: hoteis
-        })
-        carregaAcessoByHoteis();
-    },
-    error: function (xhr, ajaxOptions, thrownError) {
-        console.log(xhr);
-        console.log(thrownError);
-    }
 
-});
-[HttpGet]
-[ResponseType(typeof (Response<List<Hotel>>))]
-    [Route("GetHoteisByUsuarioId")]
-        public HttpResponseMessage GetHoteisByUsuarioId(int id)
-        {
-        try
-            {
-            var response = _manager.GetHoteisByUsuarioId(id);
-            return base.ReturnResponseGet(response);
-        }
-            catch(Exception ex) {
-            this.log.Error(ex.Message);
-            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, Resources.Language.obterHoteisUsuarioError);
-        }
-    }
+
+//$.ajax({
+//    type: "GET",
+//    url: '/Hotel/GetHoteisByUsuarioId',
+//    dataType: 'json',
+//    data: { id: $("#CodUsuario").val() },
+//    success: function (result) {
+//        exibeHoteis(result.Data[0]);
+//        $.each(result.Data[0], function (i, item) {
+//            userHoteis.push(item);
+//            $.each(hoteis, function (j, hotel) {
+//                if (hotel != null && item.CodHotel == hotel.id) {
+//                    hoteis.splice(j, 1)
+//                }
+//            })
+//        })
+//        $('#Hotel').typeahead({
+//            source: hoteis
+//        })
+//        carregaAcessoByHoteis();
+//    },
+//    error: function (xhr, ajaxOptions, thrownError) {
+//        console.log(xhr);
+//        console.log(thrownError);
+//    }
+
+//});
+//[HttpGet]
+//[ResponseType(typeof (Response<List<Hotel>>))]
+//    [Route("GetHoteisByUsuarioId")]
+//        public HttpResponseMessage GetHoteisByUsuarioId(int id)
+//        {
+//        try
+//            {
+//            var response = _manager.GetHoteisByUsuarioId(id);
+//            return base.ReturnResponseGet(response);
+//        }
+//            catch(Exception ex) {
+//            this.log.Error(ex.Message);
+//            return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, Resources.Language.obterHoteisUsuarioError);
+//        }
+//    }

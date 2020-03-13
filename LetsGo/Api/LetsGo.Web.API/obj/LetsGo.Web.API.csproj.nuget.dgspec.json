@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj": {}
+    "C:\\ProjetosGit\\LetsGo\\LetsGo\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj": {
+    "C:\\ProjetosGit\\LetsGo\\LetsGo\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj",
+        "projectUniqueName": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj",
         "projectName": "LetsGo.Web.API",
-        "projectPath": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj",
+        "projectPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Api\\LetsGo.Web.API\\LetsGo.Web.API.csproj",
         "packagesPath": "C:\\Users\\mmota\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Api\\LetsGo.Web.API\\obj\\",
+        "outputPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Api\\LetsGo.Web.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

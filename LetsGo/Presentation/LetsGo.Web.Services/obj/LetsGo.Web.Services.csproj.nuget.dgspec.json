@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj": {}
+    "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj": {
+    "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj",
+        "projectUniqueName": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj",
         "projectName": "LetsGo.Web.Services",
-        "projectPath": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj",
+        "projectPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.Services\\LetsGo.Web.Services.csproj",
         "packagesPath": "C:\\Users\\mmota\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.Services\\obj\\",
+        "outputPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,8 @@
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\bin\Debug\netcoreapp3.1\LetsGo.Web.Services.deps.json
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\bin\Debug\netcoreapp3.1\LetsGo.Web.Services.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\bin\Debug\netcoreapp3.1\LetsGo.Web.Services.pdb
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\obj\Debug\netcoreapp3.1\LetsGo.Web.Services.csprojAssemblyReference.cache
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\obj\Debug\netcoreapp3.1\LetsGo.Web.Services.AssemblyInfoInputs.cache
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\obj\Debug\netcoreapp3.1\LetsGo.Web.Services.AssemblyInfo.cs
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\obj\Debug\netcoreapp3.1\LetsGo.Web.Services.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.Services\obj\Debug\netcoreapp3.1\LetsGo.Web.Services.pdb

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.UI\\LetsGo.Web.UI.csproj",
+      "projectUniqueName": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI\\LetsGo.Web.UI.csproj",
       "projectName": "LetsGo.Web.UI",
-      "projectPath": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.UI\\LetsGo.Web.UI.csproj",
+      "projectPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI\\LetsGo.Web.UI.csproj",
       "packagesPath": "C:\\Users\\mmota\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mmota\\Desktop\\TCC\\LetsGo.Web.UI\\Presentation\\LetsGo.Web.UI\\obj\\",
+      "outputPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
