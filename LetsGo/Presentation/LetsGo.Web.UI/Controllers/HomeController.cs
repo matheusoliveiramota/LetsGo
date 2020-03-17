@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LetsGo.Web.UI.Models;
+using System.Threading.Tasks;
 
 namespace LetsGo.Web.UI.Controllers
 {
@@ -28,6 +29,12 @@ namespace LetsGo.Web.UI.Controllers
         public IActionResult AdicionarRestaurante(Restaurante restaurante)
         {
             return View("NovoRestaurante");
+        }
+
+        [HttpGet("[controller]/GetTableState/{idTable}")]
+        public ActionResult<int> GetTableState(int idTable)
+        {
+            return 1;
         }
 
         public IActionResult Privacy()

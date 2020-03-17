@@ -4,12 +4,9 @@ let number
 const grid = 30
 const backgroundColor = '#f8f8f8'
 const lineStroke = '#ebebeb'
-const tableFill = 'rgba(150, 111, 51, 0.7)'
+const tableFill = 'rgba(0, 0, 0, 0.7)'
 const tableStroke = '#694d23'
 const tableShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
-const chairFill = 'rgba(67, 42, 4, 0.7)'
-const chairStroke = '#32230b'
-const chairShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
 
 let widthEl = document.getElementById('width')
 let heightEl = document.getElementById('height')
@@ -152,28 +149,6 @@ function addRect(left, top, width, height) {
     return g
 }
 
-function addChair(left, top, width, height) {
-    const o = new fabric.Rect({
-        left: left,
-        top: top,
-        width: 30,
-        height: 30,
-        fill: chairFill,
-        stroke: chairStroke,
-        strokeWidth: 2,
-        shadow: chairShadow,
-        originX: 'left',
-        originY: 'top',
-        centeredRotation: true,
-        snapAngle: 45,
-        selectable: true,
-        type: 'chair',
-        id: generateId()
-    })
-    canvas.add(o)
-    return o
-}
-
 function snapToGrid(target) {
     target.set({
         left: Math.round(target.left / (grid / 2)) * grid / 2,
@@ -276,10 +251,6 @@ slider.noUiSlider.on('update', function (values, handle) {
 })
 
 function addDefaultObjects() {
-    addChair(15, 105)
-    addChair(15, 135)
-    addChair(75, 105)
-    addChair(75, 135)
     //addChair(225, 75)
     //addChair(255, 75)
     //addChair(225, 135)
@@ -325,12 +296,33 @@ function addDefaultObjects() {
     //addRect(210, 630, 90, 60)
 }
 
+function UpdateBookState() {
+    console.log('AQUI');
+}
+
 window.addEventListener("load", function (event) {
     addDefaultObjects()
     console.log("Olá");
     console.log(this.document);
-    console.log(canvas);
-    console.log(canvas.getContext('TESTEMATHEUS'));
+
+    $.ajax({
+        type: "GET",
+        url: '/Home/GetTableState/1',
+        dataType: 'text',
+        success: function (result) {
+            if (result == 0) {
+                console.log('IGUAL')
+            }
+            else {
+                console.log('DIFERENTE')
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr);
+            console.log(thrownError);
+        }
+    });
+
 });
 
 
@@ -338,7 +330,7 @@ window.addEventListener("load", function (event) {
 
 //$.ajax({
 //    type: "POST",
-//    url: '/Usuario/GetAcessosByHotel',
+//    url: '/Home/GetTableState',
 //    dataType: 'json',
 //    data: { usuarioId: $("#CodUsuario").val(), hoteis: hoteisAcesso },
 //    success: function (result) {
@@ -396,43 +388,6 @@ window.addEventListener("load", function (event) {
 //        }
 //    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//$.ajax({
-//    type: "GET",
-//    url: '/Hotel/GetHoteisByUsuarioId',
-//    dataType: 'json',
-//    data: { id: $("#CodUsuario").val() },
-//    success: function (result) {
-//        exibeHoteis(result.Data[0]);
-//        $.each(result.Data[0], function (i, item) {
-//            userHoteis.push(item);
-//            $.each(hoteis, function (j, hotel) {
-//                if (hotel != null && item.CodHotel == hotel.id) {
-//                    hoteis.splice(j, 1)
-//                }
-//            })
-//        })
-//        $('#Hotel').typeahead({
-//            source: hoteis
-//        })
-//        carregaAcessoByHoteis();
-//    },
-//    error: function (xhr, ajaxOptions, thrownError) {
-//        console.log(xhr);
-//        console.log(thrownError);
-//    }
 
 //});
 //[HttpGet]

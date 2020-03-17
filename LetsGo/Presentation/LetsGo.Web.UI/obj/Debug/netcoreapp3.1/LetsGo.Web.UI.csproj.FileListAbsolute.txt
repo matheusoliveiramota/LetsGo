@@ -156,7 +156,6 @@ C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csprojAssemblyReference.cache
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.Manifest.cache
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.xml
-C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cache
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cs
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.AssemblyInfoInputs.cache
@@ -178,3 +177,4 @@ C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csproj.CopyComplete
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.MvcApplicationPartsAssemblyInfo.cache
