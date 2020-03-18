@@ -31,11 +31,18 @@ namespace LetsGo.Web.UI.Controllers
             return View("NovoRestaurante");
         }
 
-        [HttpGet("[controller]/GetTableState/{idTable}")]
+        [HttpGet("[controller]/GetEstadoMesa/{idTable}")]
         public ActionResult<int> GetTableState(int idTable)
         {
             return 1;
         }
+
+        [HttpGet("[controller]/GetMesas")]
+        public ActionResult<int> GetTables()
+        {
+            return 1;
+        }
+
 
         public IActionResult Privacy()
         {

@@ -4,9 +4,12 @@ let number
 const grid = 30
 const backgroundColor = '#f8f8f8'
 const lineStroke = '#ebebeb'
-const tableFill = 'rgba(0, 0, 0, 0.7)'
 const tableStroke = '#694d23'
 const tableShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
+
+const corMesaOcupada = 'rgba(251, 49, 49, 0.95)'
+const corMesaVazia = 'rgba(11, 277, 11, 0.95)'
+const corMesaNaoMonitorada = 'rgba(243, 243, 11, 0.95)'
 
 let widthEl = document.getElementById('width')
 let heightEl = document.getElementById('height')
@@ -111,12 +114,12 @@ function generateId() {
     return Math.random().toString(36).substr(2, 8)
 }
 
-function addRect(left, top, width, height) {
+function addRect(left, top, width, height, color) {
     const id = generateId()
     const o = new fabric.Rect({
         width: width,
         height: height,
-        fill: tableFill,
+        fill: color,
         stroke: tableStroke,
         strokeWidth: 2,
         shadow: tableShadow,
@@ -128,8 +131,8 @@ function addRect(left, top, width, height) {
     })
     const t = new fabric.IText(number.toString(), {
         fontFamily: 'Calibri',
-        fontSize: 14,
-        fill: '#fff',
+        fontSize: 18,
+        fill: '#000',
         textAlign: 'center',
         originX: 'center',
         originY: 'center'
@@ -234,22 +237,6 @@ document.querySelectorAll('.submit')[0].addEventListener('click', function () {
     document.querySelectorAll('#modal-table-id')[0].innerHTML = modalText
 })
 
-const slider = document.getElementById('slider')
-noUiSlider.create(slider, {
-    start: 1200,
-    step: 15,
-    connect: 'lower',
-    range: {
-        min: 0,
-        max: 1425
-    }
-})
-
-const sliderValue = document.getElementById('slider-value')
-slider.noUiSlider.on('update', function (values, handle) {
-    sliderValue.innerHTML = formatTime(values[handle])
-})
-
 function addDefaultObjects() {
     //addChair(225, 75)
     //addChair(255, 75)
@@ -284,7 +271,7 @@ function addDefaultObjects() {
     //addChair(225, 675)
     //addChair(255, 675)
 
-    addRect(30, 90, 60, 90)
+    addRect(30, 90, 60, 90, corMesaNaoMonitorada)
     //addRect(210, 90, 90, 60)
     //addRect(210, 210, 90, 60)
     //addRect(0, 210, 90, 60)
@@ -307,7 +294,7 @@ window.addEventListener("load", function (event) {
 
     $.ajax({
         type: "GET",
-        url: '/Home/GetTableState/1',
+        url: '/Home/GetEstadoMesa/1',
         dataType: 'text',
         success: function (result) {
             if (result == 0) {
@@ -322,7 +309,6 @@ window.addEventListener("load", function (event) {
             console.log(thrownError);
         }
     });
-
 });
 
 
