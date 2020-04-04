@@ -153,7 +153,6 @@ C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.dll
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Views.pdb
-C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csprojAssemblyReference.cache
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.Manifest.cache
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.UI.StaticWebAssets.xml
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.RazorAssemblyInfo.cache
@@ -177,4 +176,13 @@ C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.dll
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.pdb
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csproj.CopyComplete
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.csprojAssemblyReference.cache

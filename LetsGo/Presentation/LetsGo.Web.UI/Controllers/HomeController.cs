@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LetsGo.Web.UI.Models;
 using System.Threading.Tasks;
+using System.Collections;
+using System.Collections.Generic;
+using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LetsGo.Web.UI.Controllers
 {
@@ -20,6 +24,7 @@ namespace LetsGo.Web.UI.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult AdicionarRestaurante()
         {
             return View("NovoRestaurante");
@@ -38,9 +43,20 @@ namespace LetsGo.Web.UI.Controllers
         }
 
         [HttpGet("[controller]/GetMesas")]
-        public ActionResult<int> GetTables()
+        public ActionResult<dynamic> GetTables()
         {
-            return 1;
+            List<Mesa> mesas = new List<Mesa>();
+            mesas.Add(new Mesa { Id = 1, Coordenadas = new Coordenadas { Esquerda = 30, Topo = 90, Largura = 60, Altura =  90}, Estado = 1 });
+            mesas.Add(new Mesa { Id = 2 ,Coordenadas = new Coordenadas { Esquerda = 210, Topo = 90, Largura = 90, Altura = 60 }, Estado = 0 });
+
+            var result = new { Mesas = mesas, DataUltimaAtualizacao = DateTime.Now };
+            return Json(result);
+        }
+
+        [HttpGet("[controller]/ExisteAlteracao")]
+        public ActionResult<bool> ExisteAlteracao(DateTime dataUltimaAtualizacao)
+        {
+            return true;
         }
 
 

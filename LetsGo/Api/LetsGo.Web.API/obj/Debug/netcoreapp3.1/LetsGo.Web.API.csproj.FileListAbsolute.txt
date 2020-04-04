@@ -25,7 +25,6 @@ C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\bin\Debug\netcoreapp3.1\LetsGo.W
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\bin\Debug\netcoreapp3.1\LetsGo.Web.API.runtimeconfig.dev.json
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\bin\Debug\netcoreapp3.1\LetsGo.Web.API.dll
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\bin\Debug\netcoreapp3.1\LetsGo.Web.API.pdb
-C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\LetsGo.Web.API.csprojAssemblyReference.cache
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.API.StaticWebAssets.Manifest.cache
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\staticwebassets\LetsGo.Web.API.StaticWebAssets.xml
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\LetsGo.Web.API.MvcApplicationPartsAssemblyInfo.cache
@@ -34,3 +33,4 @@ C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\LetsGo.W
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\LetsGo.Web.API.RazorTargetAssemblyInfo.cache
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\LetsGo.Web.API.dll
 C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\LetsGo.Web.API.pdb
+C:\ProjetosGit\LetsGo\LetsGo\Api\LetsGo.Web.API\obj\Debug\netcoreapp3.1\LetsGo.Web.API.csprojAssemblyReference.cache

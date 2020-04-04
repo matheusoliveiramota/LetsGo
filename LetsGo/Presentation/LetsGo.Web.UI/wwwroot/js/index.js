@@ -1,6 +1,7 @@
 ﻿// canvas._objects
 let canvas
-let number
+let dataUltimaAtualizacao
+
 const grid = 30
 const backgroundColor = '#f8f8f8'
 const lineStroke = '#ebebeb'
@@ -114,7 +115,7 @@ function generateId() {
     return Math.random().toString(36).substr(2, 8)
 }
 
-function addRect(left, top, width, height, color) {
+function addRect(left, top, width, height, color, number) {
     const id = generateId()
     const o = new fabric.Rect({
         width: width,
@@ -148,7 +149,6 @@ function addRect(left, top, width, height, color) {
         number: number
     })
     canvas.add(g)
-    number++
     return g
 }
 
@@ -283,26 +283,29 @@ function addDefaultObjects() {
     //addRect(210, 630, 90, 60)
 }
 
-function UpdateBookState() {
-    console.log('AQUI');
+function inserirMesa(mesa, index) {
+
+    let corMesa = corMesaNaoMonitorada;
+
+    if (mesa.estado == 0)
+        corMesa = corMesaVazia;
+
+    if (mesa.estado == 1)
+        corMesa = corMesaOcupada;
+
+    addRect(mesa.coordenadas.esquerda, mesa.coordenadas.topo, mesa.coordenadas.largura, mesa.coordenadas.altura, corMesa, mesa.id);
 }
 
 window.addEventListener("load", function (event) {
-    addDefaultObjects()
-    console.log("Olá");
-    console.log(this.document);
 
     $.ajax({
         type: "GET",
-        url: '/Home/GetEstadoMesa/1',
-        dataType: 'text',
+        url: '/Home/GetMesas',
+        dataType: 'json',
         success: function (result) {
-            if (result == 0) {
-                console.log('IGUAL')
-            }
-            else {
-                console.log('DIFERENTE')
-            }
+
+            result.mesas.forEach(inserirMesa);
+            dataUltimaAtualizacao = result.dataUltimaAtualizacao;
         },
         error: function (xhr, ajaxOptions, thrownError) {
             console.log(xhr);
@@ -310,6 +313,31 @@ window.addEventListener("load", function (event) {
         }
     });
 });
+
+
+//window.addEventListener("load", function (event) {
+//    addDefaultObjects()
+//    console.log("Olá");
+//    console.log(this.document);
+
+//    $.ajax({
+//        type: "GET",
+//        url: '/Home/GetEstadoMesa/1',
+//        dataType: 'text',
+//        success: function (result) {
+//            if (result == 0) {
+//                console.log('IGUAL')
+//            }
+//            else {
+//                console.log('DIFERENTE')
+//            }
+//        },
+//        error: function (xhr, ajaxOptions, thrownError) {
+//            console.log(xhr);
+//            console.log(thrownError);
+//        }
+//    });
+//});
 
 
 

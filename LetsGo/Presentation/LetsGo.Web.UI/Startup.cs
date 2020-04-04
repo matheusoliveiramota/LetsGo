@@ -24,6 +24,27 @@ namespace LetsGo.Web.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddAuthentication(options =>
+            {
+                //forma de autenticação local do usuário
+                options.DefaultScheme = "Cookies";
+                //protocolo que define o fluxo de autenticação
+                options.DefaultChallengeScheme = "OpenIdConnect";
+            })
+            .AddCookie()
+            .AddOpenIdConnect(options =>
+            {
+                options.SignInScheme = "Cookies";
+                options.Authority = "http://localhost:5000";
+                options.ClientId = "LetsGo.MVC";
+                options.ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0";
+                options.SaveTokens = true;
+                            //1) autorização e 2) identidade do usuário
+                            options.ResponseType = "code id_token";
+                            //código de autorização + token de identidade
+                            options.RequireHttpsMetadata = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +64,8 @@ namespace LetsGo.Web.UI
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
