@@ -7,7 +7,7 @@ Trabalho de Conclusão de Curso de Computação 2020: Controle de presença de m
   - Projeto WEB: Inserção de novo Restaurante para controle interno do dono
  
 2. Pasta Arduino
-  - Botões simulando a alteraçaõ de estado do botão e enviam o sinal para a API quando há mudança de estado
+  - Botões simulando a alteração de estado do botão e enviam o sinal para a API quando há mudança de estado
   
 3. Pasta SQL
   - Scripts base, com criação de tabelas e registros essenciais.
