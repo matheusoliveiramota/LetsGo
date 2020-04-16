@@ -22,13 +22,12 @@
 <body>
     <nav>
         <div class="nav-wrapper">
+
             <a class="brand-logo right" href='@Url.Action("Index", "Home")'>
                 <img id="aviao4travel" src='@Url.Content("~/Midia/aviao4travel.png")' />
             </a>
             <ul class="left-hide-on-med-and-down">
-                @Html.ActionLink("Home", "Index", "Home")
-
-                @Html.ActionLink("Novo Restaurante", "AdicionarRestaurante", "Home")
+                <p>Olá, @User.FindFirst("given_name")?.Value</p>
             </ul>
         </div>
 

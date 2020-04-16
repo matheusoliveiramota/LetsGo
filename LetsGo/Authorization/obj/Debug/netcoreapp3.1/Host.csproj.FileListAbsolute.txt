@@ -1,0 +1,8 @@
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\Host.csprojAssemblyReference.cache
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\staticwebassets\Host.StaticWebAssets.Manifest.cache
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\staticwebassets\Host.StaticWebAssets.xml
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\Host.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\Host.RazorAssemblyInfo.cache
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\Host.RazorAssemblyInfo.cs
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\Host.AssemblyInfoInputs.cache
+C:\Users\mmota\Downloads\curso-identityserver-master\curso-identityserver-master\Mod04\Host\obj\Debug\netcoreapp3.1\Host.AssemblyInfo.cs

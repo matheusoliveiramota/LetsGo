@@ -1,0 +1,11 @@
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\bin\Debug\netcoreapp1.1\Properties\launchSettings.json
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\bin\Debug\netcoreapp1.1\LetsGo.IdentityServer.deps.json
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\bin\Debug\netcoreapp1.1\LetsGo.IdentityServer.runtimeconfig.json
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\bin\Debug\netcoreapp1.1\LetsGo.IdentityServer.runtimeconfig.dev.json
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\bin\Debug\netcoreapp1.1\LetsGo.IdentityServer.dll
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\bin\Debug\netcoreapp1.1\LetsGo.IdentityServer.pdb
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\obj\Debug\netcoreapp1.1\LetsGo.IdentityServer.AssemblyInfoInputs.cache
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\obj\Debug\netcoreapp1.1\LetsGo.IdentityServer.AssemblyInfo.cs
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\obj\Debug\netcoreapp1.1\LetsGo.IdentityServer.dll
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\obj\Debug\netcoreapp1.1\LetsGo.IdentityServer.pdb
+C:\ProjetosGit\LetsGo\LetsGo\Authorization\obj\Debug\netcoreapp1.1\LetsGo.IdentityServer.csprojAssemblyReference.cache

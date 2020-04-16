@@ -19,21 +19,23 @@ namespace LetsGo.Web.API
                 .Build();
 
 
-            var hostUrl = configuration["hosturl"];
-            if (string.IsNullOrEmpty(hostUrl))
-                hostUrl = "http://0.0.0.0:7300/";
+            //var hostUrl = configuration["hosturl"];
+            //if (string.IsNullOrEmpty(hostUrl))
+            //    hostUrl = "http://0.0.0.0:7300/";
 
 
-            var host = new WebHostBuilder()
-                .UseKestrel()
-                .UseUrls(hostUrl) 
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
-                .UseStartup<Startup>()
-                .UseConfiguration(configuration)
-                .Build();
+            //var host = new WebHostBuilder()
+            //    .UseKestrel()
+            //    .UseUrls(hostUrl) 
+            //    .UseContentRoot(Directory.GetCurrentDirectory())
+            //    .UseIISIntegration()
+            //    .UseStartup<Startup>()
+            //    .UseConfiguration(configuration)
+            //    .Build();
 
-            host.Run();
+            //host.Run();
+
+            CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

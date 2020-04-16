@@ -1,0 +1,45 @@
+﻿@model NewUserInputModel
+
+    <div class="login-page">
+        <div class="page-header">
+            <h1>Novo Usuário</h1>
+        </div>
+
+        @if (Model == null)
+        {
+            @Html.Partial("_ValidationSummary")
+        }
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Dados Usuário</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <form asp-route="New">
+                            <input type="hidden" asp-for="ReturnUrl" />
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <input class="form-control" placeholder="Nome" asp-for="Name" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nome de usuário</label>
+                                    <input class="form-control" placeholder="Usuário" asp-for="Username" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label>Senha</label>
+                                    <input type="password" class="form-control" placeholder="Senha" asp-for="Password" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary">Salvar</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

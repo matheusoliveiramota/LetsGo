@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "LetsGo.Web.API.Services/1.0.0": {
+        "dependencies": {
+          "LetsGo.Domain": "1.0.0"
+        },
+        "runtime": {
+          "LetsGo.Web.API.Services.dll": {}
+        }
+      },
+      "LetsGo.Domain/1.0.0": {
+        "runtime": {
+          "LetsGo.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LetsGo.Web.API.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LetsGo.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

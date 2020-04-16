@@ -129,6 +129,7 @@ div.cartao {
     nav div ul.left-hide-on-med-and-down {
         display: none;
         text-align: center;
+        padding-left: 5%;
     }
 
     nav div.nav-wrapper {
