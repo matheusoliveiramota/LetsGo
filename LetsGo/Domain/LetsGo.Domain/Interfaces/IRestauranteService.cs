@@ -7,7 +7,7 @@ namespace LetsGo.Domain.Interfaces
 {
     public interface IRestauranteService
     {
-        void InsertRestaurante(Restaurante restaurante);
+        Restaurante InsertRestaurante(Restaurante restaurante);
         Restaurante GetRestaurante(string nomeDeUsuario);
     }
 }

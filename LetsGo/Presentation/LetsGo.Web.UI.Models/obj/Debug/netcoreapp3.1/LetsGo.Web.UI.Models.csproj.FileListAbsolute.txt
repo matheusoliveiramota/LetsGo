@@ -1,0 +1,8 @@
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.deps.json
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.pdb
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.csprojAssemblyReference.cache
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.AssemblyInfoInputs.cache
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.AssemblyInfo.cs
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Models\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.pdb

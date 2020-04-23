@@ -14,13 +14,13 @@ namespace LetsGo.Web.UI.Services
             _configuration = configuration;
         }
         protected string UrlApi { get { return _configuration.GetSection("UrlApi").Value; } }
-        protected dynamic ChamadaApiPost(string baseApiAddress, string objetoSerializado, string strApiAddress)
+        protected dynamic ChamadaApiPost(string objetoSerializado, string strApiAddress)
         {
             try
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    client.BaseAddress = new Uri(baseApiAddress);
+                    client.BaseAddress = new Uri(UrlApi);
 
                     var content = new StringContent(objetoSerializado, Encoding.UTF8, "application/json");
                     HttpResponseMessage result = client.PostAsync(strApiAddress, content).GetAwaiter().GetResult();
@@ -29,7 +29,7 @@ namespace LetsGo.Web.UI.Services
                     {
                         using (HttpContent respostahttp = result.Content)
                         {
-                            return JsonConvert.DeserializeObject(respostahttp.ReadAsStringAsync().GetAwaiter().GetResult());
+                            return respostahttp.ReadAsStringAsync().GetAwaiter().GetResult();
                         }
                     }
                     else
@@ -44,13 +44,13 @@ namespace LetsGo.Web.UI.Services
             }
         }
 
-        protected dynamic ChamadaApiPut(string baseApiAddress, string objetoSerializado, string strApiAddress)
+        protected dynamic ChamadaApiPut(string objetoSerializado, string strApiAddress)
         {
             try
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    client.BaseAddress = new Uri(baseApiAddress);
+                    client.BaseAddress = new Uri(UrlApi);
 
                     var content = new StringContent(objetoSerializado, Encoding.UTF8, "application/json");
                     HttpResponseMessage result = client.PutAsync(strApiAddress, content).GetAwaiter().GetResult();
@@ -74,13 +74,13 @@ namespace LetsGo.Web.UI.Services
             }
         }
 
-        protected dynamic ChamadaApiGET(string baseApiAddress, string strApiAddress)
+        protected dynamic ChamadaApiGET(string strApiAddress)
         {
             try
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    client.BaseAddress = new Uri(baseApiAddress);
+                    client.BaseAddress = new Uri(UrlApi);
 
                     HttpResponseMessage result = client.GetAsync(strApiAddress).GetAwaiter().GetResult();
 
@@ -88,7 +88,7 @@ namespace LetsGo.Web.UI.Services
                     {
                         using (HttpContent respostahttp = result.Content)
                         {
-                            return JsonConvert.DeserializeObject(respostahttp.ReadAsStringAsync().GetAwaiter().GetResult());
+                            return respostahttp.ReadAsStringAsync().GetAwaiter().GetResult();
                         }
                     }
                     else

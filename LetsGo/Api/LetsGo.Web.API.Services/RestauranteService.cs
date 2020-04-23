@@ -8,21 +8,29 @@ namespace LetsGo.Web.API.Services
 {
     public class RestauranteService : IRestauranteService
     {
-        protected readonly IRestauranteRepository _repository;
+        protected readonly IRestauranteRepository _restauranteRepository;
+        protected readonly IUsuarioRepository _usuarioRepository;
 
-        public RestauranteService(IRestauranteRepository repository)
+        public RestauranteService(IRestauranteRepository repository, IUsuarioRepository usuarioRepository)
         {
-            _repository = repository;
+            _restauranteRepository = repository;
+            _usuarioRepository = usuarioRepository;
         }
 
         public Restaurante GetRestaurante(string nomeDeUsuario)
         {
-            throw new NotImplementedException();
+            return _restauranteRepository.GetRestaurante(nomeDeUsuario);
         }
 
-        public void InsertRestaurante(Restaurante restaurante)
+        public Restaurante InsertRestaurante(Restaurante restaurante)
         {
-            _repository.InsertRestaurante(new Restaurante());
+            restaurante.Usuario = _usuarioRepository.GetUsuario(restaurante.Usuario.NomeDeUsuario);
+            restaurante.Endereco = _restauranteRepository.InsertEndereco(restaurante.Endereco);
+            restaurante = _restauranteRepository.InsertRestaurante(restaurante);
+            _restauranteRepository.InsertItemPlaca(restaurante);
+            _restauranteRepository.InsertMesas(restaurante);
+
+            return _restauranteRepository.GetRestaurante(restaurante.CodRestaurante);
         }
     }
 }

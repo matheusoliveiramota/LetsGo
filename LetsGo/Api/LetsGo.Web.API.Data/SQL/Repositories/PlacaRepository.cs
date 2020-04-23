@@ -19,7 +19,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
             IEnumerable<Placa> placas = _conn.Query<Placa>("SELECT CodPlaca,Nome FROM Placa");
             foreach(var placa in placas)
             {
-                placa.Pinos = _conn.Query<Pino>("SELECT CodPino,Numero FROM Pino");
+                placa.Pinos = _conn.Query<Pino>("SELECT CodPino,Numero FROM Pino WHERE CodPlaca = @CodPlaca", new { placa.CodPlaca });
             }
             return placas;
         }

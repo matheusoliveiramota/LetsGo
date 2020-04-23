@@ -39,6 +39,13 @@ label.novoDestinoPais {
     padding-left: 0px;
 }
 
+label.itemPino {
+    color: rgb(4,116,143);
+    font-size: 18px;
+    padding-top: 30px;
+    padding-left: 19px;
+}
+
 label.novoDestinoEstadoCidade {
     color: rgb(4,116,143);
     font-size: 21px;
@@ -47,8 +54,8 @@ label.novoDestinoEstadoCidade {
 }
 
 div.selectPaises {
-    padding-left: 10px;
-    padding-right: 60%;
+    padding-left: 12px;
+    padding-right: 85%;
     padding-bottom: 15px;
     padding-top: 15px;
 }

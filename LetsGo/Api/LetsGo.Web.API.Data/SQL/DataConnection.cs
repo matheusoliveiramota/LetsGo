@@ -36,7 +36,7 @@ namespace LetsGo.Web.API.Data.SQL
         {
             OpenConnection();
 
-            var ret = _conn.ExecuteScalar<T>(sqlQuery, parameters);
+            var ret = _conn.Query<T>(sqlQuery, parameters).FirstOrDefault();
 
             CloseConnection();
 

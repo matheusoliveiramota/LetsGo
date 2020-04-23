@@ -59,6 +59,61 @@
         }
       }
     },
+    "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI.Models\\LetsGo.Web.UI.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI.Models\\LetsGo.Web.UI.Models.csproj",
+        "projectName": "LetsGo.Web.UI.Models",
+        "projectPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI.Models\\LetsGo.Web.UI.Models.csproj",
+        "packagesPath": "C:\\Users\\mmota\\.nuget\\packages\\",
+        "outputPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mmota\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI.Services\\LetsGo.Web.UI.Services.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -87,6 +142,9 @@
             "projectReferences": {
               "C:\\ProjetosGit\\LetsGo\\LetsGo\\Domain\\LetsGo.Domain\\LetsGo.Domain.csproj": {
                 "projectPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Domain\\LetsGo.Domain\\LetsGo.Domain.csproj"
+              },
+              "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI.Models\\LetsGo.Web.UI.Models.csproj": {
+                "projectPath": "C:\\ProjetosGit\\LetsGo\\LetsGo\\Presentation\\LetsGo.Web.UI.Models\\LetsGo.Web.UI.Models.csproj"
               }
             }
           }
@@ -100,6 +158,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[3.1.3, )"

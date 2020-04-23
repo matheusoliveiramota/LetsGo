@@ -8,6 +8,7 @@ using System;
 using Microsoft.AspNetCore.Authorization;
 using LetsGo.Web.UI.Services.Interfaces;
 using LetsGo.Domain.Entities;
+using LetsGo.Web.UI.Models;
 
 namespace LetsGo.Web.UI.Controllers
 {
@@ -15,52 +16,64 @@ namespace LetsGo.Web.UI.Controllers
     {
         private readonly IRestauranteServiceUI _restauranteService;
         private readonly IUsuarioServiceUI _usuarioService;
+        private readonly IPlacaServiceUI _placaService;
 
-        public HomeController(IRestauranteServiceUI restauranteService, IUsuarioServiceUI usuarioService)
+        public HomeController(IRestauranteServiceUI restauranteService, IUsuarioServiceUI usuarioService, IPlacaServiceUI placaService)
         {
             _restauranteService = restauranteService;
             _usuarioService = usuarioService;
+            _placaService = placaService;
         }
 
         [Authorize]
         public IActionResult Index()
         {
             var nomeDeUsuario = User.FindFirst("sub")?.Value;
-            if(!string.IsNullOrEmpty(nomeDeUsuario))
+            if (!string.IsNullOrEmpty(nomeDeUsuario))
             {
                 var usuario = _usuarioService.GetByNomeDeUsuario(User.FindFirst("sub")?.Value);
-                if(usuario == null)
+                if (usuario == null)
                 {
-                    usuario = _usuarioService.InsertUsuario(new Usuario { Nome = User.FindFirst("sub")?.Value,
-                                                                          NomeDeUsuario = User.FindFirst("sub")?.Value
+                    usuario = _usuarioService.InsertUsuario(new Usuario
+                    {
+                        Nome = User.FindFirst("name")?.Value,
+                        NomeDeUsuario = User.FindFirst("sub")?.Value
                     });
 
-                    return View("NovoRestaurante");
+                    return RedirectToAction("AdicionarRestaurante", usuario);
                 }
 
                 var restaurante = _restauranteService.GetByUsuario(usuario);
-                if(restaurante != null)
+                if (restaurante != null)
                 {
                     return View(); // Index e passar parâmetro Usuario por ViewBag
                 }
                 else
                 {
-                    return View("NovoRestaurante");
+                    return RedirectToAction("AdicionarRestaurante", usuario);
                 }
             }
-            
+
             return View();
         }
 
         [Authorize]
-        public IActionResult AdicionarRestaurante()
+        public IActionResult AdicionarRestaurante(Usuario usuario)
         {
+            var placa = _placaService.Get();
+            var estados = _usuarioService.GetEstados();
+
+            ViewBag.NomeDeUsuario = usuario.NomeDeUsuario;
+            ViewBag.Placa = placa;
+            ViewBag.Estados = estados;
+
             return View("NovoRestaurante");
         }
 
         [HttpPost]
-        public IActionResult AdicionarRestaurante(Restaurante restaurante)
+        public IActionResult AdicionarRestaurante(RestauranteUI restauranteUI)
         {
+            _restauranteService.InsertRestaurante(restauranteUI);
             return View("NovoRestaurante");
         }
 

@@ -9,7 +9,9 @@ namespace LetsGo.Domain.Interfaces
     {
         Endereco InsertEndereco(Endereco endereco); 
         Restaurante InsertRestaurante(Restaurante restaurante);
-        void InsertMesas(IEnumerable<Mesa> mesa); 
-        Restaurante GetRestaurante(Usuario usuario);
+        void InsertMesas(Restaurante restaurante); 
+        Restaurante GetRestaurante(string nomeDeUsuario);
+        void InsertItemPlaca(Restaurante restaurante);
+        Restaurante GetRestaurante(int codRestaurante);
     }
 }

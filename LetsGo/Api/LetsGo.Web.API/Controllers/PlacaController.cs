@@ -21,9 +21,9 @@ namespace LetsGo.Web.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Placa>> GetPlacas()
+        public ActionResult<Placa> Get()
         {
-            return Ok(_service.GetPlacas());
+            return Ok(_service.GetPlacas().FirstOrDefault());
         }
     }
 }

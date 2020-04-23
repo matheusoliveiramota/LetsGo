@@ -271,7 +271,7 @@ function addDefaultObjects() {
     //addChair(225, 675)
     //addChair(255, 675)
 
-    addRect(30, 90, 60, 90, corMesaNaoMonitorada)
+    addRect(30, 30, 60, 90, corMesaNaoMonitorada, 1)
     //addRect(210, 90, 90, 60)
     //addRect(210, 210, 90, 60)
     //addRect(0, 210, 90, 60)
@@ -297,21 +297,21 @@ function inserirMesa(mesa, index) {
 }
 
 window.addEventListener("load", function (event) {
+    addDefaultObjects()
+    //$.ajax({
+    //    type: "GET",
+    //    url: '/Home/GetMesas',
+    //    dataType: 'json',
+    //    success: function (result) {
 
-    $.ajax({
-        type: "GET",
-        url: '/Home/GetMesas',
-        dataType: 'json',
-        success: function (result) {
-
-            result.mesas.forEach(inserirMesa);
-            dataUltimaAtualizacao = result.dataUltimaAtualizacao;
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log(xhr);
-            console.log(thrownError);
-        }
-    });
+    //        result.mesas.forEach(inserirMesa);
+    //        dataUltimaAtualizacao = result.dataUltimaAtualizacao;
+    //    },
+    //    error: function (xhr, ajaxOptions, thrownError) {
+    //        console.log(xhr);
+    //        console.log(thrownError);
+    //    }
+    //});
 });
 
 

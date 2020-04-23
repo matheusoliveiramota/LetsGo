@@ -20,16 +20,20 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
 
         public Usuario GetUsuario(string nomeDeUsuario)
         {
-            return _conn.QueryScalar<Usuario>("SELECT CodUsuario,Nome,NomeDeUsuario FROM Usuario");
+            var usuario = _conn.QueryScalar<Usuario>("SELECT CodUsuario, Nome,NomeDeUsuario FROM Usuario WHERE NomeDeUsuario = @NomeDeUsuario"
+                                             ,new { nomeDeUsuario });
+        
+            return usuario;
         }
 
         public Usuario InsertUsuario(Usuario usuario)
         {
-            return _conn.QueryScalar<Usuario>(@"SET NOCOUNT ON
-                                                INSERT INTO Usuario(Nome,NomeDeUsuario) VALUES(@Nome,@NomeDeUsuario)
-                                                
-                                                SELECT CodUsuario,Nome,NomeDeUsuario FROM Usuario",
-                                                new { usuario.Nome, usuario.NomeDeUsuario });
+            usuario.CodUsuario = _conn.QueryScalar<int>(@"INSERT INTO Usuario(Nome,NomeDeUsuario) VALUES(@Nome,@NomeDeUsuario)
+                            
+                                                          SELECT SCOPE_IDENTITY() AS CodUsuario"
+                                                        ,new { usuario.Nome, usuario.NomeDeUsuario });
+
+            return usuario;
         }
     }
 }

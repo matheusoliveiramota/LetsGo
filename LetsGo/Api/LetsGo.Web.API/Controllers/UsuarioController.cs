@@ -20,6 +20,12 @@ namespace LetsGo.Web.API.Controllers
             _service = placaService;
         }
 
+        [HttpGet("{nomeDeUsuario}")]
+        public ActionResult<Usuario> Get(string nomeDeUsuario)
+        {
+            return Ok(_service.GetUsuario(nomeDeUsuario));
+        }
+
         [HttpGet("GetEstados")]
         public ActionResult<IEnumerable<Estado>> GetEstados()
         {

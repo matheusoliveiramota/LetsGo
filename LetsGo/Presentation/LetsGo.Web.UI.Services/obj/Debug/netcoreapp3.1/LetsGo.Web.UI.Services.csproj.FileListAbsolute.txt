@@ -9,3 +9,5 @@ C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Services\obj\Debug\netco
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Services\bin\Debug\netcoreapp3.1\LetsGo.Domain.dll
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Services\bin\Debug\netcoreapp3.1\LetsGo.Domain.pdb
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Services\obj\Debug\netcoreapp3.1\LetsGo.Web.UI.Services.csproj.CopyComplete
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Services\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI.Services\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.pdb

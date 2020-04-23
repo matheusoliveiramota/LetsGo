@@ -55,7 +55,7 @@ BEGIN
 		Esquerda INT,
 		Topo INT,
 		Largura INT,
-		Altura BIT
+		Altura INT
 	)
 END
 
@@ -64,7 +64,21 @@ BEGIN
 	CREATE TABLE Placa
 	(
 		CodPlaca INT PRIMARY KEY IDENTITY,
-		Nome VARCHAR(200) 
+		Nome VARCHAR(200),
+		Descricao VARCHAR(200)
+	)
+END
+
+IF NOT EXISTS(SELECT TOP 1 1 FROM sys.tables WHERE name = 'ItemPlaca')
+BEGIN
+	CREATE TABLE ItemPlaca
+	(
+		CodItemPlaca INT PRIMARY KEY IDENTITY,
+		CodPlaca INT,
+		CodRestaurante INT,
+		CodigoDeBarras VARCHAR(200),
+		CONSTRAINT FK_ItemPlaca_Placa FOREIGN KEY (CodPlaca) REFERENCES Placa(CodPlaca),
+		CONSTRAINT FK_ItemaPlaca_Restaurante FOREIGN KEY (CodRestaurante) REFERENCES Restaurante(CodRestaurante)
 	)
 END
 

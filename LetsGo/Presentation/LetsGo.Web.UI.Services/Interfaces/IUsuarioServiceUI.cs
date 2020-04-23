@@ -9,5 +9,6 @@ namespace LetsGo.Web.UI.Services.Interfaces
     {
         Usuario GetByNomeDeUsuario(string nomeDeUsuario);
         Usuario InsertUsuario(Usuario usuario);
+        IEnumerable<Estado> GetEstados();
     }
 }

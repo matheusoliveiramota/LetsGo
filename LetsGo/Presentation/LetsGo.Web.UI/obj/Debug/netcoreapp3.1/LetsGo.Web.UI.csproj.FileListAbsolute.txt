@@ -193,3 +193,7 @@ C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Services.dll
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Services.pdb
 C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Domain.pdb
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.dll
+C:\ProjetosGit\LetsGo\LetsGo\Presentation\LetsGo.Web.UI\bin\Debug\netcoreapp3.1\LetsGo.Web.UI.Models.pdb

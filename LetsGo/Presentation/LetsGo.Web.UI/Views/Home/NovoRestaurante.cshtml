@@ -1,4 +1,4 @@
-﻿@model LetsGo.Web.UI.Models.Restaurante
+﻿@model LetsGo.Web.UI.Models.RestauranteUI
 
 @{
     ViewBag.Title = "Novo Restaurante";
@@ -17,11 +17,31 @@
 </nav>
 
 <form action="/Home/AdicionarRestaurante" method="post" enctype="multipart/form-data">
+    <br />
+    <!-- USUARIO -->
+    @Html.Hidden("NomeDeUsuario", (string)ViewBag.NomeDeUsuario)
     <!-- NOME -->
     <div class="form-group">
         <label class="novoDestinoEstadoCidade">Nome</label>
         <div class="textoEstadoCidade">
             <input placeholder="Digite o nome do Restaurante" name="Nome" type="text" class="validate" required>
+        </div>
+    </div>
+    <!-- ESTADO -->
+    <div class="selectPaises">
+        <label class="novoDestinoPais">Estado</label>
+        <select name="CodEstado" class="browser-default" required>
+            @foreach (var estado in ViewBag.Estados)
+            {
+                <option value="@estado.CodEstado">@estado.Sigla</option>
+            }
+        </select>
+    </div>
+    <!-- CIDADE -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">Cidade</label>
+        <div class="textoEstadoCidade">
+            <input placeholder="Digite o nome da Cidade" name="Cidade" type="text" class="validate" required>
         </div>
     </div>
     <!-- ENDEREÇO -->
@@ -39,7 +59,7 @@
         </div>
     </div>
 
-    <!-- AUTOR -->
+    <!-- CEP -->
     <div class="form-group">
         <label class="novoDestinoEstadoCidade">CEP</label>
         <div class="textoEstadoCidade">
@@ -55,21 +75,51 @@
         </div>
     </div>
 
-    <!-- IMAGEM -->
-    <div class="imagem">
-        <div class="row">
-            <div class="file-field input-field">
-                <div class="btn">
-                    <span>IMAGEM</span>
-                    <input type="file" name="Imagem" />
-                </div>
+    <!-- COMPLEMENTO -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">Complemento</label>
+        <div class="textoEstadoCidade">
+            <input name="Complemento" type="text" class="validate">
+        </div>
+    </div>
 
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text"
-                           placeholder="Adicione um logo" />
+    <!-- IMAGEM -->
+    @*<div class="imagem">
+            <div class="row">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>IMAGEM</span>
+                        <input type="file" name="Imagem" />
+                    </div>
+
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text"
+                               placeholder="Adicione um logo" />
+                    </div>
                 </div>
             </div>
+        </div>*@
+
+    <!-- PLACA -->
+    <div class="selectPaises">
+        <label class="novoDestinoPais">Placa</label>
+        <select name="CodPlaca" class="browser-default" required>
+            @{
+                <option value="@ViewBag.Placa.CodPlaca" selected>@ViewBag.Placa.Nome</option>
+            }
+        </select>
+    </div>
+
+    <!-- QTD MESAS -->
+    <div class="form-group">
+        <label class="novoDestinoEstadoCidade">Quantidade de Mesas:</label>
+        <div class="textoEstadoCidade">
+            <input name="QtdMesas" id="qtdMesas" type="number" class="validate" required onchange="adicionarPino()">
         </div>
+    </div>
+
+    <!-- MESA X PINO -->
+    <div class="form-group" id="pinos">
     </div>
 
     <div class="botaoEnviar">
@@ -82,4 +132,53 @@
         src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
+    <script>
+        var listaPinos = @Json.Serialize(ViewBag.Placa.Pinos);
+
+        function adicionarPino() {
+
+            var divPinos = document.querySelector('#pinos'); 
+
+            var divList = document.createElement('div');
+                divList.setAttribute("class", "form-group")
+
+            var qtdMesas = document.querySelector('#qtdMesas').value;
+            if (qtdMesas > 0) {
+
+                for (var i = 0; i < qtdMesas; i++) {
+
+                    var lblItem = document.createElement('label');
+                        lblItem.setAttribute("class", "itemPino");
+                    var textLabel = document.createTextNode("Selecione um pino (sensor) para a mesa " + (i+1) + ":");
+                        lblItem.appendChild(textLabel);
+
+                    var divItem = document.createElement('div');
+                        divItem.setAttribute("class","selectPaises");    
+
+                    var select = document.createElement("select");
+                        select.setAttribute("name", "Pinos[" + i + "]");
+                        select.setAttribute("class", "browser-default");
+
+                    for (var x = 0; x < listaPinos.length; x++) {
+
+                        var option = document.createElement("option");
+                        option.setAttribute("value", listaPinos[x].codPino);
+                        var text = document.createTextNode(listaPinos[x].numero);
+                        option.appendChild(text);
+
+                        select.appendChild(option);
+                    }
+
+                    divItem.appendChild(select);
+                    lblItem.appendChild(divItem);
+                    divList.appendChild(lblItem);
+                }
+                divPinos.innerHTML = "";
+                divPinos.appendChild(divList);
+            }
+            else {
+                divPinos.innerHTML = "";
+            }
+        }
+    </script>
 }

@@ -12,5 +12,6 @@ namespace LetsGo.Domain.Entities
         public Pino Pino { get; set; }
         public int Numero { get; set; }
         public EstadoMesa Estado { get; set; }
+        public DateTime DataAlteracaoEstado { get; set; }
     }
 }

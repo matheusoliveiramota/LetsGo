@@ -54,6 +54,7 @@ namespace LetsGo.Web.UI
 
             services.AddScoped<IUsuarioServiceUI, UsuarioServiceUI>();
             services.AddScoped<IRestauranteServiceUI, RestauranteServiceUI>();
+            services.AddScoped<IPlacaServiceUI, PlacaServiceUI>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

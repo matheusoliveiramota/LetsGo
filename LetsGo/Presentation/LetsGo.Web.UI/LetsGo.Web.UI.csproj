@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LetsGo.Web.UI.Models\LetsGo.Web.UI.Models.csproj" />
     <ProjectReference Include="..\LetsGo.Web.UI.Services\LetsGo.Web.UI.Services.csproj" />
   </ItemGroup>
 
