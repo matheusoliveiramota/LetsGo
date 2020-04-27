@@ -12,6 +12,21 @@ namespace LetsGo.Web.UI.Services
     public class RestauranteServiceUI : ServiceUI, IRestauranteServiceUI
     {
         public RestauranteServiceUI(IConfiguration configuration) : base(configuration) { }
+
+        public bool ExisteAlteracao(int codRestaurante, DateTime dataUltimaAlteracaoClient)
+        {
+            DateTime dataUltimaAlteracaoServer = DateTime.MinValue;
+
+            var response = ChamadaApiGET("/api/Restaurante/GetUltimaAlteracoMesa/" + codRestaurante);
+
+            if (response != null)
+            {
+                dataUltimaAlteracaoServer = JsonConvert.DeserializeObject<DateTime>(response);
+            }
+
+            return dataUltimaAlteracaoServer > dataUltimaAlteracaoClient;
+        }
+
         public Restaurante GetByUsuario(Usuario usuario)
         {
             Restaurante restaurante = null;
@@ -24,6 +39,20 @@ namespace LetsGo.Web.UI.Services
             }
 
             return restaurante;
+        }
+
+        public IEnumerable<Mesa> GetMesas(int codRestaurante)
+        {
+            IEnumerable<Mesa> mesas = null;
+
+            var response = ChamadaApiGET("/api/Restaurante/GetMesas/" + codRestaurante);
+
+            if (response != null)
+            {
+                mesas = JsonConvert.DeserializeObject<IEnumerable<Mesa>>(response);
+            }
+
+            return mesas;
         }
 
         public Restaurante InsertRestaurante(RestauranteUI restauranteUI)
@@ -109,6 +138,7 @@ namespace LetsGo.Web.UI.Services
         {
             int larguraEntreMesas = (larguraTotal - (comprimentoMesa * qtdMesasPorLinha)) / (qtdMesasPorLinha + 1);
             int larguraLinha = larguraEntreMesas;
+            int espacoAltura = comprimentoTopo;
 
             int qtdMesas = 1; 
 
@@ -116,12 +146,12 @@ namespace LetsGo.Web.UI.Services
             {
                 if(qtdMesas > qtdMesasPorLinha)
                 {
-                    larguraLinha = larguraEntreMesas;       
-                    comprimentoTopo += comprimentoMesa + comprimentoTopo;
+                    larguraLinha = larguraEntreMesas;
+                    espacoAltura += comprimentoMesa + comprimentoTopo;
                     qtdMesas = 1;
                 }
                 
-                mesas[i].Coordenada = new Coordenada { Topo = comprimentoTopo, Esquerda = larguraLinha, Altura = comprimentoMesa, Largura = comprimentoMesa };
+                mesas[i].Coordenada = new Coordenada { Topo = espacoAltura, Esquerda = larguraLinha, Altura = comprimentoMesa, Largura = comprimentoMesa };
                 larguraLinha += larguraEntreMesas + comprimentoMesa;
 
                 qtdMesas++;

@@ -10,5 +10,7 @@ namespace LetsGo.Web.UI.Services.Interfaces
     {
         Restaurante GetByUsuario(Usuario usuario);
         Restaurante InsertRestaurante(RestauranteUI usuario);
+        bool ExisteAlteracao(int codRestaurante, DateTime dataUltimaAtualizacao);
+        IEnumerable<Mesa> GetMesas(int codRestaurante);
     }
 }

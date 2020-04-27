@@ -1,5 +1,4 @@
-﻿// canvas._objects
-let canvas
+﻿let canvas
 let dataUltimaAtualizacao
 
 const grid = 30
@@ -7,6 +6,7 @@ const backgroundColor = '#f8f8f8'
 const lineStroke = '#ebebeb'
 const tableStroke = '#694d23'
 const tableShadow = 'rgba(0, 0, 0, 0.4) 3px 3px 7px'
+const tableStrokeWidth = 3
 
 const corMesaOcupada = 'rgba(251, 49, 49, 0.95)'
 const corMesaVazia = 'rgba(11, 277, 11, 0.95)'
@@ -90,26 +90,14 @@ function initCanvas() {
 initCanvas()
 
 function resizeCanvas() {
-    widthEl = document.getElementById('width')
-    heightEl = document.getElementById('height')
-    canvasEl.width = widthEl.value ? widthEl.value : 812
-    canvasEl.height = heightEl.value ? heightEl.value : 812
+    canvasEl.width = 812
+    canvasEl.height = 812
     const canvasContainerEl = document.querySelectorAll('.canvas-container')[0]
     canvasContainerEl.style.width = canvasEl.width
     canvasContainerEl.style.height = canvasEl.height
 }
-resizeCanvas()
 
-widthEl.addEventListener('change', () => {
-    resizeCanvas()
-    initCanvas()
-    addDefaultObjects()
-})
-heightEl.addEventListener('change', () => {
-    resizeCanvas()
-    initCanvas()
-    addDefaultObjects()
-})
+resizeCanvas()
 
 function generateId() {
     return Math.random().toString(36).substr(2, 8)
@@ -122,7 +110,7 @@ function addRect(left, top, width, height, color, number) {
         height: height,
         fill: color,
         stroke: tableStroke,
-        strokeWidth: 2,
+        strokeWidth: tableStrokeWidth,
         shadow: tableShadow,
         originX: 'center',
         originY: 'center',
@@ -132,7 +120,7 @@ function addRect(left, top, width, height, color, number) {
     })
     const t = new fabric.IText(number.toString(), {
         fontFamily: 'Calibri',
-        fontSize: 18,
+        fontSize: 30,
         fill: '#000',
         textAlign: 'center',
         originX: 'center',
@@ -194,49 +182,6 @@ function sendLinesToBack() {
     })
 }
 
-document.querySelectorAll('.rectangle')[0].addEventListener('click', function () {
-    const o = addRect(0, 0, 60, 60)
-    canvas.setActiveObject(o)
-})
-
-document.querySelectorAll('.chair')[0].addEventListener('click', function () {
-    const o = addChair(0, 0)
-    canvas.setActiveObject(o)
-})
-
-document.querySelectorAll('.remove')[0].addEventListener('click', function () {
-    console.log('CLICOU 1');
-    const o = canvas.getActiveObject()
-    if (o) {
-        console.log('CLICOU 2');
-        o.remove()
-        canvas.remove(o)
-        canvas.discardActiveObject()
-        canvas.renderAll()
-    }
-})
-
-function formatTime(val) {
-    const hours = Math.floor(val / 60)
-    const minutes = val % 60
-    const englishHours = hours > 12 ? hours - 12 : hours
-
-    const normal = hours + ':' + minutes + (minutes === 0 ? '0' : '')
-    const english = englishHours + ':' + minutes + (minutes === 0 ? '0' : '') + ' ' + (hours > 12 ? 'PM' : 'AM')
-
-    return normal + ' (' + english + ')'
-}
-
-document.querySelectorAll('.submit')[0].addEventListener('click', function () {
-    const obj = canvas.getActiveObject()
-    $('#modal').modal('show')
-    let modalText = 'You have not selected anything'
-    if (obj) {
-        modalText = 'You have selected table ' + obj.number + ', time: ' + formatTime(slider.noUiSlider.get())
-    }
-    document.querySelectorAll('#modal-table-id')[0].innerHTML = modalText
-})
-
 function addDefaultObjects() {
     //addChair(225, 75)
     //addChair(255, 75)
@@ -287,33 +232,88 @@ function inserirMesa(mesa, index) {
 
     let corMesa = corMesaNaoMonitorada;
 
-    if (mesa.estado == 0)
+    if (mesa.estado == 1)
         corMesa = corMesaVazia;
 
-    if (mesa.estado == 1)
+    if (mesa.estado == 2)
         corMesa = corMesaOcupada;
 
-    addRect(mesa.coordenadas.esquerda, mesa.coordenadas.topo, mesa.coordenadas.largura, mesa.coordenadas.altura, corMesa, mesa.id);
+    addRect(mesa.coordenada.esquerda, mesa.coordenada.topo, mesa.coordenada.largura, mesa.coordenada.altura, corMesa, mesa.numero);
+}
+
+function getMaxDataUltimaAlteracao(mesas) {
+    return mesas.reduce((max, item) => item.dataAlteracaoEstado > max ? item.dataAlteracaoEstado : max, mesas[0].dataAlteracaoEstado);
+}
+
+function removerMesas() {
+
+    let canvasObjects = canvas.getObjects()
+
+    for (let i = canvasObjects.length - 1; i >= 0; i--) {
+
+        let obj = canvasObjects[i];
+
+        if (obj.type == "table") {
+            obj.remove()
+            canvas.remove(obj)
+            canvas.renderAll()
+        }
+    }
+}
+
+function atualizarMesas() {
+    $.ajax({
+        type: "GET",
+        url: '/Home/GetMesas/' + restaurante.codRestaurante,
+        dataType: 'json',
+        success: function (result) {
+
+            var dataUltimaAtualizacaoServer = getMaxDataUltimaAlteracao(result);
+
+            if (dataUltimaAtualizacaoServer > dataUltimaAtualizacao) {
+
+                removerMesas();
+
+                restaurante.mesas = result;
+                restaurante.mesas.forEach(inserirMesa);
+
+                dataUltimaAtualizacao = getMaxDataUltimaAlteracao(restaurante.mesas);
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr);
+            console.log(thrownError);
+        }
+    });
 }
 
 window.addEventListener("load", function (event) {
-    addDefaultObjects()
-    //$.ajax({
-    //    type: "GET",
-    //    url: '/Home/GetMesas',
-    //    dataType: 'json',
-    //    success: function (result) {
 
-    //        result.mesas.forEach(inserirMesa);
-    //        dataUltimaAtualizacao = result.dataUltimaAtualizacao;
-    //    },
-    //    error: function (xhr, ajaxOptions, thrownError) {
-    //        console.log(xhr);
-    //        console.log(thrownError);
-    //    }
-    //});
+    restaurante.mesas.forEach(inserirMesa);
+    dataUltimaAtualizacao = getMaxDataUltimaAlteracao(restaurante.mesas);
+
+    loop();
+
+    setInterval(function () {
+
+        atualizarMesas();
+    }, 15000); // 15 seg
 });
 
+//$.ajax({
+//    type: "GET",
+//    url: '/Home/GetMesas',
+//    dataType: 'json',
+//    success: function (result) {
+
+//        result.mesas.forEach(inserirMesa);
+//        dataUltimaAtualizacao = result.dataUltimaAtualizacao;
+//    },
+//    error: function (xhr, ajaxOptions, thrownError) {
+//        console.log(xhr);
+//        console.log(thrownError);
+//    }
+//});
 
 //window.addEventListener("load", function (event) {
 //    addDefaultObjects()

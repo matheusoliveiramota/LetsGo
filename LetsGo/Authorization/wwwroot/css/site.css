@@ -1,18 +1,15 @@
 ﻿body {
-  margin-top: 65px;
+  margin-bottom: 65px;
 }
 .navbar-header {
   position: relative;
-  top: -4px;
 }
 .navbar-brand > .icon-banner {
   position: relative;
-  top: -2px;
   display: inline;
 }
 .icon {
   position: relative;
-  top: -10px;
 }
 .logged-out iframe {
   display: none;

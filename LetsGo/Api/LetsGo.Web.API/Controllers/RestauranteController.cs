@@ -24,8 +24,20 @@ namespace LetsGo.Web.API.Controllers
             return Ok(_service.GetRestaurante(nomeDeUsuario));
         }
 
+        [HttpGet("GetUltimaAlteracoMesa/{codRestaurante}")]
+        public ActionResult GetUltimaAlteracoEstadoMesa(int codRestaurante)
+        {
+            return Ok(_service.GetUltimaAlteracaoEstadoMesa(codRestaurante));
+        }
+
+        [HttpGet("GetMesas/{codRestaurante}")]
+        public ActionResult GetMesas(int codRestaurante)
+        {
+            return Ok(_service.GetMesas(codRestaurante));
+        }
+
         [HttpPost]
-        public ActionResult Create(Restaurante restaurante)
+        public ActionResult InsertRestaurante(Restaurante restaurante)
         {
             return Ok(_service.InsertRestaurante(restaurante));
         }

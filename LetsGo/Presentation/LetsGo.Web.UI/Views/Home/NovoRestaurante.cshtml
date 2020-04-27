@@ -4,13 +4,12 @@
     ViewBag.Title = "Novo Restaurante";
 }
 
-<img id="banner" src="~/Midia/novolugar.jpg" style="width: 100%;"/>
+<img id="banner" src="~/Midia/novorestaurante.jpg" style="width: 100%;"/>
 
 <nav>
     <div class="caminho">
         <div class="col s12">
-            @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "breadcrumb" })
-            @Html.ActionLink("Novo Restaurante", "NovoRestaurante", "Home", new { area = "" }, new { @class = "breadcrumb" })
+            Olá, @User.FindFirst("given_name")?.Value! Preencha os dados do novo restaurante:
         </div>
     </div>
 
@@ -101,7 +100,7 @@
         </div>*@
 
     <!-- PLACA -->
-    <div class="selectPaises">
+    <div class="selectPlaca">
         <label class="novoDestinoPais">Placa</label>
         <select name="CodPlaca" class="browser-default" required>
             @{
@@ -112,9 +111,9 @@
 
     <!-- QTD MESAS -->
     <div class="form-group">
-        <label class="novoDestinoEstadoCidade">Quantidade de Mesas:</label>
+        <label class="novoDestinoEstadoCidade">Quantidade de mesas:</label>
         <div class="textoEstadoCidade">
-            <input name="QtdMesas" id="qtdMesas" type="number" class="validate" required onchange="adicionarPino()">
+            <input name="QtdMesas" id="qtdMesas" type="number" class="validate" min="1" max="30" required onchange="adicionarPino()">
         </div>
     </div>
 

@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Authorization;
 using LetsGo.Web.UI.Services.Interfaces;
 using LetsGo.Domain.Entities;
 using LetsGo.Web.UI.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Authentication;
 
 namespace LetsGo.Web.UI.Controllers
 {
@@ -46,7 +48,7 @@ namespace LetsGo.Web.UI.Controllers
                 var restaurante = _restauranteService.GetByUsuario(usuario);
                 if (restaurante != null)
                 {
-                    return View(); // Index e passar parâmetro Usuario por ViewBag
+                    return View(restaurante);
                 }
                 else
                 {
@@ -70,35 +72,30 @@ namespace LetsGo.Web.UI.Controllers
             return View("NovoRestaurante");
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult AdicionarRestaurante(RestauranteUI restauranteUI)
         {
             _restauranteService.InsertRestaurante(restauranteUI);
-            return View("NovoRestaurante");
+            return RedirectToAction("Index");
         }
 
-        [HttpGet("[controller]/GetEstadoMesa/{idTable}")]
-        public ActionResult<int> GetTableState(int idTable)
+        [Authorize]
+        [HttpGet("[controller]/GetMesas/{codRestaurante}")]
+        public ActionResult<dynamic> GetMesas(int codRestaurante)
         {
-            return 1;
-        }
-
-        [HttpGet("[controller]/GetMesas")]
-        public ActionResult<dynamic> GetTables()
-        {
-            //List<Mesa> mesas = new List<Mesa>();
-            //mesas.Add(new Mesa { Id = 1, Coordenadas = new Coordenadas { Esquerda = 30, Topo = 90, Largura = 60, Altura =  90}, Estado = 1 });
-            //mesas.Add(new Mesa { Id = 2 ,Coordenadas = new Coordenadas { Esquerda = 210, Topo = 90, Largura = 90, Altura = 60 }, Estado = 0 });
-
-            //var result = new { Mesas = mesas, DataUltimaAtualizacao = DateTime.Now };
-            var result = new { DataUltimaAtualizacao = DateTime.Now };
+            var result = _restauranteService.GetMesas(codRestaurante);
             return Json(result);
         }
 
-        [HttpGet("[controller]/ExisteAlteracao")]
-        public ActionResult<bool> ExisteAlteracao(DateTime dataUltimaAtualizacao)
+        [Authorize]
+        public async Task LogOut()
         {
-            return true;
+            // Atualizar os Coookies (Atuenticação Local)
+            await HttpContext.SignOutAsync("Cookies");
+
+            // Desconcecta no Identity Server
+            await HttpContext.SignOutAsync("OpenIdConnect");
         }
 
         public IActionResult Privacy()

@@ -33,7 +33,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
 
                 restaurante.Placa = GetPlacaPorRestaurante(restaurante.CodRestaurante);
 
-                restaurante.Mesas = GetMesasPorRestaurante(restaurante.CodRestaurante);
+                restaurante.Mesas = GetMesas(restaurante.CodRestaurante);
             }
 
             return restaurante;
@@ -57,7 +57,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
 
                 restaurante.Placa = GetPlacaPorRestaurante(restaurante.CodRestaurante);
 
-                restaurante.Mesas = GetMesasPorRestaurante(restaurante.CodRestaurante);
+                restaurante.Mesas = GetMesas(restaurante.CodRestaurante);
             }
 
             return restaurante;
@@ -156,7 +156,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
                                                         ,new { endereco.CodEndereco });
             return endereco;
         }
-        private IEnumerable<Mesa> GetMesasPorRestaurante(int codRestaurante)
+        public IEnumerable<Mesa> GetMesas(int codRestaurante)
         {
             var mesas = _conn.Query<Mesa>(@"SELECT M.CodMesa,M.CodEstadoMesa AS Estado,M.DataAlteracaoEstado,M.Numero
 		                                                FROM Mesa		   M
@@ -211,6 +211,15 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
                                                               coordenada.Altura
                                                           });
             return codCoordenada;
+        }
+
+        public DateTime GetUltimaAlteracaoEstadoMesa(int codRestaurante)
+        {
+            return _conn.QueryScalar<DateTime>(@"SELECT ISNULL(MAX(M.DataAlteracaoEstado),0) AS DataAlteracaoEstado
+		                                                    FROM Mesa		   M
+	                                                INNER JOIN Restaurante     R ON R.CodRestaurante = M.CodRestaurante
+                                                WHERE R.CodRestaurante = @CodRestaurante"
+                                              , new { codRestaurante });
         }
     }
 }

@@ -294,7 +294,7 @@ namespace IdentityServer4.Quickstart.UI
                 return View();
             }
 
-            TestUsers.Users.Add(new TestUser { SubjectId = newUser.Username ,Username = newUser.Username, Password = newUser.Password, Claims = { new Claim(JwtClaimTypes.Name, newUser.Name) } });
+            TestUsers.Users.Add(new TestUser { SubjectId = newUser.Username ,Username = newUser.Username, Password = newUser.Password, Claims = { new Claim(JwtClaimTypes.Name, newUser.Name), new Claim(JwtClaimTypes.GivenName, newUser.Name.Split(' ')[0]) } });
 
             return RedirectToAction("Login", new { returnUrl = newUser.ReturnUrl });
         }

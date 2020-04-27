@@ -13,5 +13,7 @@ namespace LetsGo.Domain.Interfaces
         Restaurante GetRestaurante(string nomeDeUsuario);
         void InsertItemPlaca(Restaurante restaurante);
         Restaurante GetRestaurante(int codRestaurante);
+        DateTime GetUltimaAlteracaoEstadoMesa(int codRestaurante);
+        IEnumerable<Mesa> GetMesas(int codRestaurante);
     }
 }

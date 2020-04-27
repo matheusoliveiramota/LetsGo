@@ -1,7 +1,6 @@
-﻿@charset
-
-="utf-8"; body {
-    margin-top: 30px;
+﻿@charset="utf-8"; 
+        
+body {
     margin-bottom: 30px;
     background: #f2f2f2;
 }
@@ -14,6 +13,31 @@ header div.apresentacao {
 img#aviao4travel {
     width: 40%;
     display: run-in;
+}
+
+a#logout {
+    padding-left: 17px;
+    display: run-in;
+}
+
+p.username {
+    padding-left: 5%;
+    font-family: 'Trebuchet MS';
+    font-size: 30px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p.nomeRestaurante {
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    font-size: 35px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 nav div.nav-wrapper {
@@ -56,6 +80,13 @@ label.novoDestinoEstadoCidade {
 div.selectPaises {
     padding-left: 12px;
     padding-right: 85%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+div.selectPlaca {
+    padding-left: 12px;
+    padding-right: 60%;
     padding-bottom: 15px;
     padding-top: 15px;
 }
@@ -126,7 +157,7 @@ div.cartao {
 
 /*AVIÃO SOBRE A NAV*/
 @media (max-width: 755px ) {
-    div.cartÃ£o {
+    div.cartao {
         display: block;
         justify-content: space-between;
         height: 50px;
@@ -134,8 +165,7 @@ div.cartao {
     }
     /*Esconder Texto: Tentativa de Centralizar o Logo*/
     nav div ul.left-hide-on-med-and-down {
-        display: none;
-        text-align: center;
+        display: block;
         padding-left: 5%;
     }
 

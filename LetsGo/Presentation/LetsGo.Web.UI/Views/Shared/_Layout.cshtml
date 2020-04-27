@@ -23,11 +23,11 @@
     <nav>
         <div class="nav-wrapper">
 
-            <a class="brand-logo right" href='@Url.Action("Index", "Home")'>
+            <a class="brand-logo center" href='@Url.Action("Index", "Home")'>
                 <img id="aviao4travel" src='@Url.Content("~/Midia/aviao4travel.png")' />
             </a>
-            <ul class="left-hide-on-med-and-down">
-                <p>Olá, @User.FindFirst("given_name")?.Value</p>
+            <ul id="nav-mobile" class="left-hide-on-med-and-down">
+              <li class="active"><a id="logout" href='@Url.Action("Logout", "Home")'><h6>Sair</h6></a></li>
             </ul>
         </div>
 

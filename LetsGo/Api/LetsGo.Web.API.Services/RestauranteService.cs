@@ -17,9 +17,19 @@ namespace LetsGo.Web.API.Services
             _usuarioRepository = usuarioRepository;
         }
 
+        public IEnumerable<Mesa> GetMesas(int codRestaurante)
+        {
+            return _restauranteRepository.GetMesas(codRestaurante);
+        }
+
         public Restaurante GetRestaurante(string nomeDeUsuario)
         {
             return _restauranteRepository.GetRestaurante(nomeDeUsuario);
+        }
+
+        public DateTime GetUltimaAlteracaoEstadoMesa(int codRestaurante)
+        {
+            return _restauranteRepository.GetUltimaAlteracaoEstadoMesa(codRestaurante);
         }
 
         public Restaurante InsertRestaurante(Restaurante restaurante)

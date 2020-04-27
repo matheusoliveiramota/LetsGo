@@ -9,5 +9,7 @@ namespace LetsGo.Domain.Interfaces
     {
         Restaurante InsertRestaurante(Restaurante restaurante);
         Restaurante GetRestaurante(string nomeDeUsuario);
+        DateTime GetUltimaAlteracaoEstadoMesa(int codRestaurante);
+        IEnumerable<Mesa> GetMesas(int codRestaurante);
     }
 }
