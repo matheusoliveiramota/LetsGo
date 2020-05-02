@@ -182,52 +182,6 @@ function sendLinesToBack() {
     })
 }
 
-function addDefaultObjects() {
-    //addChair(225, 75)
-    //addChair(255, 75)
-    //addChair(225, 135)
-    //addChair(255, 135)
-    //addChair(225, 195)
-    //addChair(255, 195)
-    //addChair(225, 255)
-    //addChair(255, 255)
-    //addChair(15, 195)
-    //addChair(45, 195)
-    //addChair(15, 255)
-    //addChair(45, 255)
-    //addChair(15, 315)
-    //addChair(45, 315)
-    //addChair(15, 375)
-    //addChair(45, 375)
-    //addChair(225, 315)
-    //addChair(255, 315)
-    //addChair(225, 375)
-    //addChair(255, 375)
-    //addChair(15, 435)
-    //addChair(15, 495)
-    //addChair(15, 555)
-    //addChair(15, 615)
-    //addChair(225, 615)
-    //addChair(255, 615)
-    //addChair(195, 495)
-    //addChair(195, 525)
-    //addChair(255, 495)
-    //addChair(255, 525)
-    //addChair(225, 675)
-    //addChair(255, 675)
-
-    addRect(30, 30, 60, 90, corMesaNaoMonitorada, 1)
-    //addRect(210, 90, 90, 60)
-    //addRect(210, 210, 90, 60)
-    //addRect(0, 210, 90, 60)
-    //addRect(0, 330, 90, 60)
-    //addRect(210, 330, 90, 60)
-    //addRect(0, 450, 60, 60)
-    //addRect(0, 570, 60, 60)
-    //addRect(210, 480, 60, 90)
-    //addRect(210, 630, 90, 60)
-}
-
 function inserirMesa(mesa, index) {
 
     let corMesa = corMesaNaoMonitorada;
@@ -295,5 +249,5 @@ window.addEventListener("load", function (event) {
     setInterval(function () {
 
         atualizarMesas();
-    }, 5000); // 5 seg
+    }, 3000); // 3 seg
 });
