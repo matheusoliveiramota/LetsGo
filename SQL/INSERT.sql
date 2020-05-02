@@ -1,6 +1,6 @@
-INSERT INTO Placa(Nome) VALUES ('Node MCU ESP32')
+INSERT INTO Placa(Nome,Descricao) VALUES ('Node MCU ESP32','Placa Wi-Fi com 8 sensores')
 
-INSERT INTO Pino(CodPlaca,Numero) VALUES(1,'D0'),(1,'D1'),(1,'D2'),(1,'D3'),(1,'D4')
+INSERT INTO Pino(CodPlaca,Numero,Porta) VALUES(1,'D1',5),(1,'D2',4),(1,'D5',14),(1,'D6',12)
 
 INSERT INTO EstadoMesa(Estado) VALUES('Livre'),('Ocupada'),('Não monitorada')
 

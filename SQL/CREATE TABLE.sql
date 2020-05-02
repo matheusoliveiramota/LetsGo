@@ -89,6 +89,7 @@ BEGIN
 		CodPino INT PRIMARY KEY IDENTITY,
 		CodPlaca INT,
 		Numero VARCHAR(100),
+		Porta INT
 		CONSTRAINT FK_Placa FOREIGN KEY (CodPlaca) REFERENCES Placa(CodPlaca)
 	)
 END
@@ -117,5 +118,18 @@ BEGIN
 		CONSTRAINT FK_Coordenada FOREIGN KEY (CodCoordenada) REFERENCES Coordenada(CodCoordenada),
 		CONSTRAINT FK_Pino FOREIGN KEY (CodPino) REFERENCES Pino(CodPino),
 		CONSTRAINT FK_EstadoMesa FOREIGN KEY (CodEstadoMesa) REFERENCES EstadoMesa(CodEstadoMesa)
+	)
+END
+
+IF NOT EXISTS(SELECT TOP 1 1 FROM sys.tables WHERE name = 'LogMesaEstado')
+BEGIN
+	CREATE TABLE LogMesaEstado
+	(
+		CodLogEstadoMesa INT PRIMARY KEY IDENTITY,
+		CodMesa INT,
+		CodEstadoMesa INT,
+		[Data] DATETIME,
+		CONSTRAINT FK_LogMesaEstado_EstadoMesa FOREIGN KEY (CodEstadoMesa) REFERENCES EstadoMesa(CodEstadoMesa),
+		CONSTRAINT FK_LogMesaEstado_Mesa FOREIGN KEY (CodMesa) REFERENCES Mesa(CodMesa)
 	)
 END

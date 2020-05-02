@@ -8,6 +8,7 @@ namespace LetsGo.Domain.Entities
     {
         public int CodPlaca { get; set; }
         public string Nome { get; set; }
+        public string Descricao { get; set; }
         public IEnumerable<Pino> Pinos { get; set; }
     }
 }

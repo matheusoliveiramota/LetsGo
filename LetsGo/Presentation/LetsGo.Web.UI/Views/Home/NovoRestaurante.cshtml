@@ -62,7 +62,7 @@
     <div class="form-group">
         <label class="novoDestinoEstadoCidade">CEP</label>
         <div class="textoEstadoCidade">
-            <input placeholder="Digite o CEP" name="Cep" type="text" class="validate" required>
+            <input placeholder="Digite o CEP" name="Cep" type="text" maxlength="8" class="validate" required>
         </div>
     </div>
 
@@ -104,7 +104,7 @@
         <label class="novoDestinoPais">Placa</label>
         <select name="CodPlaca" class="browser-default" required>
             @{
-                <option value="@ViewBag.Placa.CodPlaca" selected>@ViewBag.Placa.Nome</option>
+                <option value="@ViewBag.Placa.CodPlaca" selected>@ViewBag.Placa.Descricao</option>
             }
         </select>
     </div>
@@ -122,7 +122,7 @@
     </div>
 
     <div class="botaoEnviar">
-        <button type="submit" class="waves-effect waves-light btn green accent-3"><i class="material-icons right">check_circle</i>Salvar Restaurante</button>
+        <button type="submit" class="waves-effect waves-light btn amber darken-3"><i class="material-icons right">check_circle</i>Salvar Restaurante</button>
     </div>
 </form>
 <!-- AREA PARA JAVASCRIPT -->

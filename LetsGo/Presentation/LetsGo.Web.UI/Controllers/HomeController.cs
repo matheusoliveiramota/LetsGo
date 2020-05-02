@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.Authorization;
 using LetsGo.Web.UI.Services.Interfaces;
 using LetsGo.Domain.Entities;
 using LetsGo.Web.UI.Models;
-using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.Extensions.Configuration;
 
 namespace LetsGo.Web.UI.Controllers
 {
@@ -19,12 +19,14 @@ namespace LetsGo.Web.UI.Controllers
         private readonly IRestauranteServiceUI _restauranteService;
         private readonly IUsuarioServiceUI _usuarioService;
         private readonly IPlacaServiceUI _placaService;
+        private readonly IConfiguration _configuration;
 
-        public HomeController(IRestauranteServiceUI restauranteService, IUsuarioServiceUI usuarioService, IPlacaServiceUI placaService)
+        public HomeController(IRestauranteServiceUI restauranteService, IUsuarioServiceUI usuarioService, IPlacaServiceUI placaService, IConfiguration configuration)
         {
             _restauranteService = restauranteService;
             _usuarioService = usuarioService;
             _placaService = placaService;
+            _configuration = configuration;
         }
 
         [Authorize]

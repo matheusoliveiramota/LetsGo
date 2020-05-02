@@ -2,7 +2,7 @@
         
 body {
     margin-bottom: 30px;
-    background: #f2f2f2;
+    background: #ffffff;
 }
 
 header div.apresentacao {
@@ -30,6 +30,23 @@ p.username {
     margin-inline-end: 0px;
 }
 
+p.mesaInfo {
+    font-family: 'Trebuchet MS';
+    font-size: 18px;
+    text-align: left;
+    padding-left: 70%;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+img#imgMesa { 
+    padding-right: 1px;
+    width: 7%;
+    display: run-in;
+}
+
 p.nomeRestaurante {
     font-family: 'Trebuchet MS';
     text-align: center;
@@ -41,7 +58,7 @@ p.nomeRestaurante {
 }
 
 nav div.nav-wrapper {
-    background-color: rgb(4,116,143);
+    background-color: black;
     width: 100%;
     padding-bottom: 2%;
     text-shadow: initial;
@@ -57,21 +74,21 @@ span#intercambioTitle{
 }
 
 label.novoDestinoPais {
-    color: rgb(4,116,143);
+    color: black;
     font-size: 21px;
     padding-top:30px;
     padding-left: 0px;
 }
 
 label.itemPino {
-    color: rgb(4,116,143);
+    color: black;
     font-size: 18px;
     padding-top: 30px;
     padding-left: 19px;
 }
 
 label.novoDestinoEstadoCidade {
-    color: rgb(4,116,143);
+    color: black;
     font-size: 21px;
     padding-top: 30px;
     padding-left: 15px;
@@ -112,7 +129,7 @@ div.botaoEnviar {
 }
 
 nav div.caminho {
-    background-color: rgb(4,116,143);
+    background-color: black;
     padding-left: 45px;
     box-shadow: none;
 }
@@ -146,11 +163,11 @@ div.cartao {
 
 /* Placeholder - Input */
 ::-ms-input-placeholder { /* Microsoft Edge*/
-    color: darkcyan;
+    color: black;
     font-style: italic;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: darkcyan;
+    color: black;
     font-style: italic;
     opacity:8;
 }
@@ -276,5 +293,5 @@ section p.textos-imagens {
 
 
 footer.page-footer {
-    background-color: rgb(4,116,143);
+    background-color: black;
 }

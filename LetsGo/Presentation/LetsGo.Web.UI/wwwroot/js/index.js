@@ -277,7 +277,7 @@ function atualizarMesas() {
                 restaurante.mesas = result;
                 restaurante.mesas.forEach(inserirMesa);
 
-                dataUltimaAtualizacao = getMaxDataUltimaAlteracao(restaurante.mesas);
+                dataUltimaAtualizacao = dataUltimaAtualizacaoServer;
             }
         },
         error: function (xhr, ajaxOptions, thrownError) {
@@ -291,8 +291,6 @@ window.addEventListener("load", function (event) {
 
     restaurante.mesas.forEach(inserirMesa);
     dataUltimaAtualizacao = getMaxDataUltimaAlteracao(restaurante.mesas);
-
-    loop();
 
     setInterval(function () {
 

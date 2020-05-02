@@ -9,7 +9,7 @@
             }
             <h1>
                 @Model.ClientName
-                <small>is requesting your permission</small>
+                <small>está solicitando a sua permissão</small>
             </h1>
         </div>
     </div>
@@ -20,19 +20,27 @@
 
             <form asp-action="Index" class="consent-form">
                 <input type="hidden" asp-for="ReturnUrl" />
-
-                <div>Uncheck the permissions you do not wish to grant.</div>
                 
                 @if (Model.IdentityScopes.Any())
                 {
                     <div class="panel panel-default consent-buttons">
                         <div class="panel-heading">
                             <span class="glyphicon glyphicon-user"></span>
-                            Personal Information
+                            Informações Pessoais
                         </div>
                         <ul class="list-group">
                             @foreach (var scope in Model.IdentityScopes)
                             {
+                                if(scope.Name == "openid")
+                                {
+                                    scope.DisplayName = "Seu usuário de identificação";
+                                }
+                                if(scope.Name == "profile")
+                                {
+                                    scope.Required = true;
+                                    scope.DisplayName = "Perfil de usuário";
+                                    scope.Description = "Suas informações pessoais (primeiro nome, último nome, etc..)";
+                                }
                                 @Html.Partial("_ScopeListItem", scope)
                             }
                         </ul>
@@ -44,7 +52,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <span class="glyphicon glyphicon-tasks"></span>
-                            Application Access
+                            Acessos
                         </div>
                         <ul class="list-group">
                             @foreach (var scope in Model.ResourceScopes)
@@ -54,7 +62,7 @@
                         </ul>
                     </div>
                 }
-
+@* 
                 @if (Model.AllowRememberConsent)
                 {
                     <div class="consent-remember">
@@ -63,11 +71,11 @@
                             <strong>Remember My Decision</strong>
                         </label>
                     </div>
-                }
+                } *@
 
                 <div class="consent-buttons">
-                    <button name="button" value="yes" class="btn btn-primary" autofocus>Yes, Allow</button>
-                    <button name="button" value="no" class="btn">No, Do Not Allow</button>
+                    <button name="button" value="yes" class="btn btn-primary" autofocus>Sim, Permitir</button>
+                    @* <button name="button" value="no" class="btn">Não, Não Permitir</button> *@
                     @if (Model.ClientUrl != null)
                     {
                         <a class="pull-right btn btn-default" target="_blank" href="@Model.ClientUrl">

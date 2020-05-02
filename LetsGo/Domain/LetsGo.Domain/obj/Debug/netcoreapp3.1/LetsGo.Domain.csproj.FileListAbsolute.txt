@@ -1,8 +1,0 @@
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\bin\Debug\netcoreapp3.1\LetsGo.Domain.deps.json
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\bin\Debug\netcoreapp3.1\LetsGo.Domain.dll
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\bin\Debug\netcoreapp3.1\LetsGo.Domain.pdb
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\obj\Debug\netcoreapp3.1\LetsGo.Domain.AssemblyInfoInputs.cache
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\obj\Debug\netcoreapp3.1\LetsGo.Domain.AssemblyInfo.cs
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\obj\Debug\netcoreapp3.1\LetsGo.Domain.dll
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\obj\Debug\netcoreapp3.1\LetsGo.Domain.pdb
-C:\ProjetosGit\LetsGo\LetsGo\Domain\LetsGo.Domain\obj\Debug\netcoreapp3.1\LetsGo.Domain.csprojAssemblyReference.cache

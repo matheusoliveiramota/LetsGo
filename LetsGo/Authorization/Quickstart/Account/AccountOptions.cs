@@ -21,6 +21,6 @@ namespace IdentityServer4.Quickstart.UI
         public static readonly string WindowsAuthenticationProviderName = "Windows";
         public static readonly string WindowsAuthenticationDisplayName = "Windows";
 
-        public static string InvalidCredentialsErrorMessage = "Invalid username or password";
+        public static string InvalidCredentialsErrorMessage = "Usuário ou senha inválidos";
     }
 }

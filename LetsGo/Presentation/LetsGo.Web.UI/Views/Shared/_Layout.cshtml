@@ -7,8 +7,8 @@
     <meta name="keywords" content="Destinos, Indicações, Intercâmbio" />
     <meta name="description" content="Indicações De Viagens" />
 
-    <title>4TRAVEL - @ViewBag.Title</title>
-    <link rel="shortcut icon" href="~/Midia/aviao4travel.ico" type="image/x-icon" />
+    <title>Let's Go - @ViewBag.Title</title>
+    <link rel="shortcut icon" href="~/Midia/Icone_ico.ico" type="image/x-icon" />
 
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="~/Content/materialize/css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection" />
@@ -24,7 +24,7 @@
         <div class="nav-wrapper">
 
             <a class="brand-logo center" href='@Url.Action("Index", "Home")'>
-                <img id="aviao4travel" src='@Url.Content("~/Midia/aviao4travel.png")' />
+                <img id="aviao4travel" src='@Url.Content("~/Midia/Icone.png")' />
             </a>
             <ul id="nav-mobile" class="left-hide-on-med-and-down">
               <li class="active"><a id="logout" href='@Url.Action("Logout", "Home")'><h6>Sair</h6></a></li>
@@ -45,17 +45,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">4Travel</h5>
-                        <p class="grey-text text-lighten-4">Tire suas dúvidas e veja dicas, no nosso site!</p>
+                        <h5 class="white-text">Let's Go</h5>
+                        <p class="grey-text text-lighten-4">Monitoramento de disponibilidade</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
                             <li>
-                                @Html.ActionLink("Home", "Index", "Home", new { @class = "grey-text text-lighten-3" })
-                            </li>
-                            <li>
-                                @Html.ActionLink("Novo Destino", "NovoDestino", "Home", new { @class = "grey-text text-lighten-3" })
+                                
                             </li>
                         </ul>
                     </div>

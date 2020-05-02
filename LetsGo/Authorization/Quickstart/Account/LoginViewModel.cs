@@ -10,6 +10,11 @@ namespace IdentityServer4.Quickstart.UI
 {
     public class LoginViewModel : LoginInputModel
     {
+        public LoginViewModel()
+        {
+            ExternalProviders = new List<ExternalProvider>();
+        }
+
         public bool AllowRememberLogin { get; set; }
         public bool EnableLocalLogin { get; set; }
 

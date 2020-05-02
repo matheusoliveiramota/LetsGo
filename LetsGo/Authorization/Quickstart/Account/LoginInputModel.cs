@@ -8,9 +8,9 @@ namespace IdentityServer4.Quickstart.UI
 {
     public class LoginInputModel
     {
-        [Required]
+        [Required(ErrorMessage = "Nome de usuário é obrigatório")]
         public string Username { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Nome de usuário é obrigatório")]
         public string Password { get; set; }
         public bool RememberLogin { get; set; }
         public string ReturnUrl { get; set; }

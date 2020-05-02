@@ -4,7 +4,9 @@
 
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
+using WebApplication4;
 
 namespace IdentityServer4.Quickstart.UI
 {
@@ -21,6 +23,12 @@ namespace IdentityServer4.Quickstart.UI
         public IActionResult Index()
         {
             return View();
+        }
+
+        public RedirectResult RedirectMvc()
+        {
+            var urlMvc = Config.UrlMvc;
+            return Redirect(urlMvc);
         }
 
         /// <summary>

@@ -8,7 +8,6 @@
     <div class="page-header logged-out">
         <h1>
             Logout
-            <small>You are now logged out</small>
         </h1>
 
         @if (Model.PostLogoutRedirectUri != null)
@@ -22,7 +21,7 @@
         @if (Model.PostLogoutRedirectUri == null)
         {
             <div>
-                Clique <a class="PostLogoutRedirectUri" href="http://localhost:5001">aqui</a> para retornar para a aplicação Let's Go.
+                Clique @Html.ActionLink("aqui","RedirectMvc","Home") para retornar para a aplicação Let's Go.
             </div>
         }
 

@@ -16,9 +16,15 @@ namespace LetsGo.Web.UI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
+                .AddEnvironmentVariables();
+
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -32,29 +38,37 @@ namespace LetsGo.Web.UI
 
             services.AddAuthentication(options =>
             {
-                //forma de autenticação local do usuário
+                //forma de autenticacao local do usuario
                 options.DefaultScheme = "Cookies";
-                //protocolo que define o fluxo de autenticação
+                //protocolo que define o fluxo de autenticao
                 options.DefaultChallengeScheme = "OpenIdConnect";
             })
             .AddCookie()
             .AddOpenIdConnect(options =>
             {
                 options.SignInScheme = "Cookies";
-                options.Authority = "http://localhost:5000";
+                options.Authority = Configuration.GetSection("UrlIdentity").Value;
                 options.ClientId = "LetsGo.MVC";
                 options.ClientSecret = "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0";
                 options.SaveTokens = true;
-                //1) autorização e 2) identidade do usuário
+                //1) autorizacao e 2) identidade do usuario
                 options.ResponseType = "id_token token";
-                //código de autorização + token de identidade
+                //cï¿½digo de autorizacao + token de identidade
                 options.RequireHttpsMetadata = false;
                 options.GetClaimsFromUserInfoEndpoint = true;
             });
 
-            services.AddScoped<IUsuarioServiceUI, UsuarioServiceUI>();
-            services.AddScoped<IRestauranteServiceUI, RestauranteServiceUI>();
-            services.AddScoped<IPlacaServiceUI, PlacaServiceUI>();
+            services.AddScoped<IUsuarioServiceUI, UsuarioServiceUI>(x =>
+                new UsuarioServiceUI(Configuration)
+            );
+
+            services.AddScoped<IRestauranteServiceUI, RestauranteServiceUI>(x =>
+                new RestauranteServiceUI(Configuration)
+            );
+
+            services.AddScoped<IPlacaServiceUI, PlacaServiceUI>(x =>
+                new PlacaServiceUI(Configuration)
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

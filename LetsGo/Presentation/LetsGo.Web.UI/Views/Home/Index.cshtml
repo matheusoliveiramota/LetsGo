@@ -19,6 +19,11 @@
         <div class="caption left-align">
             <p class="username">Olá, @User.FindFirst("given_name")?.Value</p>
             <p class="nomeRestaurante">@Model.Nome</p>
+            <div class="caption right-align">
+                <p class="mesaInfo"><img id="imgMesa" src='@Url.Content("~/Midia/Amarelo.png")' />Mesa não monitorada</p>
+                <p class="mesaInfo"><img id="imgMesa" src='@Url.Content("~/Midia/Vermelho.png")' />Mesa ocupada</p>
+                <p class="mesaInfo"><img id="imgMesa" src='@Url.Content("~/Midia/Verde.png")' />Mesa livre</p>
+            </div>
         </div>
 
         <!-- partial:index.partial.html -->

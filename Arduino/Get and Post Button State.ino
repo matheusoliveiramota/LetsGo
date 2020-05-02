@@ -10,29 +10,31 @@
 #include <ESP8266HTTPClient.h>
 
 /* Set Wifi credentials. */
-const char *ssid = "AndroidAP17";  //ENTER YOUR WIFI SETTINGS
-const char *password = "12345678";
+const char *ssid = "Elias";  //ENTER YOUR WIFI SETTINGS
+const char *password = "ediedi25";
 
 /* Webserver parameters */
-const String host = "192.168.43.157:7300";   //IP adress of local API
+const String host = "192.168.15.254:6002";   //IP adress of local API
 
 /* Structs */
-struct PinButton
+struct Porta
 {
-  int id, previousState, stateBook; 
+  int porta, estadoAnterior, estadoMesa; 
   long  timer;
 };
 
 /* Variables */
-String _token = "ABCDEFG123@#";
-int stateButton;
-long debounce = 500;
-struct PinButton pinButton0 = {4, LOW, LOW, 0};
-struct PinButton pinButton1 = {5, LOW, LOW, 0};
+int _codRestaurante = 13;
+int estadoBotao;
+long tempoEspera = 500;
+struct Porta porta0 = {12, LOW, LOW, 0};
+struct Porta porta1 = {14, LOW, LOW, 0};
+struct Porta porta2 = {5, LOW, LOW, 0};
+struct Porta porta3 = {4, LOW, LOW, 0};
 
 /* Array of sensors */
-const int arrayLength = 2;
-struct PinButton buttons[arrayLength];
+const int tamanhoArray = 4;
+struct Porta portas[tamanhoArray];
 
 
 //=======================================================================
@@ -64,16 +66,18 @@ void setup() {
   Serial.println(WiFi.localIP());  //IP address assigned to your ESP
 
   /* Adding sensors into array */
-  buttons[0] = pinButton0;
-  buttons[1] = pinButton1;
+  portas[0] = porta0;
+  portas[1] = porta1;
+  portas[2] = porta2;
+  portas[3] = porta3;
 
   /* Set input Pin and Get the last State of Book */
   int i;
-  for(i=0;i<arrayLength;i++)
+  for(i=0;i<tamanhoArray;i++)
   {
-     pinMode(buttons[i].id, INPUT);
-     buttons[i].stateBook = getBookState(buttons[i].id);
-     Serial.println(buttons[i].stateBook);
+     pinMode(portas[i].porta, INPUT);
+     portas[i].estadoMesa = getEstadoMesa(portas[i].porta);
+     Serial.println(portas[i].estadoMesa);
   }
 
   delay(200);
@@ -85,31 +89,31 @@ void setup() {
 void loop() {
 
   int i;
-  for(i=0;i<arrayLength;i++)
+  for(i=0;i<tamanhoArray;i++)
   {
-      stateButton = digitalRead(buttons[i].id);
-      if (stateButton == HIGH && buttons[i].previousState == LOW && millis() - buttons[i].timer > debounce) {
-        if (buttons[i].stateBook == 1) {
-          int state = postBookState(buttons[i].id,0);
-          buttons[i].stateBook = state;
-          Serial.println(buttons[i].stateBook);
+      estadoBotao = digitalRead(portas[i].porta);
+      if (estadoBotao == HIGH && portas[i].estadoAnterior == LOW && millis() - portas[i].timer > tempoEspera) {
+        if (portas[i].estadoMesa == 1) {
+          int estado = postEstadoMesa(portas[i].porta,2);
+          portas[i].estadoMesa = estado;
+          Serial.println(portas[i].estadoMesa);
         } else {
-          int state = postBookState(buttons[i].id,1);
-          buttons[i].stateBook = state;
-          Serial.println(buttons[i].stateBook);
+          int estado = postEstadoMesa(portas[i].porta,1);
+          portas[i].estadoMesa = estado;
+          Serial.println(portas[i].estadoMesa);
         }
-        buttons[i].timer = millis();
+        portas[i].timer = millis();
       }
       
-      buttons[i].previousState == stateButton;
+      portas[i].estadoAnterior == estadoBotao;
   }
 }
 
-int getBookState(int idBook)
+int getEstadoMesa(int porta)
 {
    HTTPClient http;
 
-   http.begin("http://" + host + "/api/Sensor/" + String(idBook));
+   http.begin("http://" + host + "/api/Placa/GetEstadoMesa/" + String(_codRestaurante) + "/" + String(porta));
    int httpCode = http.GET();
    
    String payload = http.getString();
@@ -127,45 +131,45 @@ int getBookState(int idBook)
    }
    else
    {
-      const int id = doc["idPinButton"];
-      const int stateBook = doc["stateBook"];
-
-      Serial.println(String(id) + " - " + String(stateBook));
+      const int porta = doc["porta"];
+      const int estadoMesa = doc["codEstadoMesa"];
+      
+      Serial.println(String(porta) + " - " + String(estadoMesa));
       http.end();
-      return stateBook;
+      return estadoMesa;
    }
    
    http.end();
    return -1;
 }
 
-int postBookState(int pinButtonId, int isAvailable)
+int postEstadoMesa(int porta, int estadoMesa)
 {
   HTTPClient http;    //Declare object of class HTTPClient
 
   const int capacity = JSON_OBJECT_SIZE(4);
   StaticJsonDocument<capacity> doc;
 
-  doc["token"] = _token;
-  doc["idPinButton"] = pinButtonId;
-  doc["isAvailable"] = isAvailable;
+  doc["codRestaurante"] = _codRestaurante;
+  doc["porta"] = porta;
+  doc["codEstadoMesa"] = estadoMesa;
 
   String data;
   serializeJson(doc, data);
 
   Serial.println(data);
 
-  http.begin("http://" + host + "/api/Sensor/UpdateState");              //Specify request destination
-  http.addHeader("Content-Type", "application/json");    //Specify content-type header
+  http.begin("http://" + host + "/api/Placa/PostEstadoMesa"); 
+  http.addHeader("Content-Type", "application/json"); 
 
-  int httpCode = http.POST(data);   //Send the request
-  String payload = http.getString();    //Get the response payload
+  int httpCode = http.POST(data);   
+  String payload = http.getString();    
 
-  Serial.println(httpCode);   //Print HTTP return code
+  Serial.println(httpCode);   
   
-  int response = payload.toInt();    //Print request response payload
+  int response = payload.toInt();    
 
-  http.end();  //Close connection
+  http.end();  
 
   return response;
 }

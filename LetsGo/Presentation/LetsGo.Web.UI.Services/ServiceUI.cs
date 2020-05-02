@@ -97,7 +97,7 @@ namespace LetsGo.Web.UI.Services
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }
