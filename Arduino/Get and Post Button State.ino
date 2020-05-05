@@ -10,8 +10,8 @@
 #include <ESP8266HTTPClient.h>
 
 /* Set Wifi credentials. */
-const char *ssid = "xxx";  //ENTER YOUR WIFI SETTINGS
-const char *password = "xxx";
+const char *ssid = "Elias";  //ENTER YOUR WIFI SETTINGS
+const char *password = "ediedi25";
 
 /* Webserver parameters */
 const String host = "192.168.15.254:6002";   //IP adress of local API
@@ -24,7 +24,7 @@ struct Porta
 };
 
 /* Variables */
-int _codRestaurante = 13;
+int _codRestaurante = 1;
 int estadoBotao;
 long tempoEspera = 500;
 struct Porta porta0 = {12, LOW, LOW, 0};
