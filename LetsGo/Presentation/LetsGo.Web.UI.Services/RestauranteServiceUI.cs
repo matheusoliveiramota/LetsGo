@@ -1,10 +1,13 @@
 ﻿using LetsGo.Domain.Entities;
 using LetsGo.Web.UI.Models;
 using LetsGo.Web.UI.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace LetsGo.Web.UI.Services
@@ -79,7 +82,7 @@ namespace LetsGo.Web.UI.Services
                 Nome = restauranteUI.Nome,
                 Usuario = new Usuario
                 {
-                    NomeDeUsuario = restauranteUI.NomeDeUsuario
+                    CodUsuario = Convert.ToInt32(restauranteUI.CodUsuario)
                 },
                 Endereco = new Endereco
                 {
@@ -93,8 +96,9 @@ namespace LetsGo.Web.UI.Services
                     Numero = restauranteUI.Numero,
                     Complemento = restauranteUI.Complemento
                 },
+                NomeImagem = SalvarImagen(restauranteUI.Imagem),
                 Mesas = mesas,
-                Placa = new ItemPlaca { Placa = new Placa { CodPlaca = restauranteUI.CodPlaca } }
+                ItemPlaca = new ItemPlaca { Placa = new Placa { CodPlaca = restauranteUI.CodPlaca } }
             };
 
             string serializedRestaurante = JsonConvert.SerializeObject(restaurante);
@@ -158,6 +162,34 @@ namespace LetsGo.Web.UI.Services
             }
 
             return mesas;
+        }
+
+        private string SalvarImagen(IFormFile file) 
+        {
+            var tiposSuportados = new[] {".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"};
+            var fileExt = Path.GetExtension(file.FileName);
+            
+            if (!tiposSuportados.Contains(fileExt))
+            {
+                return string.Empty;
+            }
+
+            var uploadPath = this._configuration.GetSection("UploadPathImagens").Value;
+            var fileName = System.Guid.NewGuid().ToString() + fileExt;
+                
+            using (var fileStream = new FileStream(Path.Combine(uploadPath, fileName), FileMode.Create))
+            {
+                try
+                {
+                    file.CopyTo(fileStream);
+                }
+                catch(Exception)
+                {
+                    return string.Empty;
+                }
+            }
+
+            return fileName;
         }
     }
 }

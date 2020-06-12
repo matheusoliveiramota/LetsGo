@@ -18,7 +18,7 @@
 <form action="/Home/AdicionarRestaurante" method="post" enctype="multipart/form-data">
     <br />
     <!-- USUARIO -->
-    @Html.Hidden("NomeDeUsuario", (string)ViewBag.NomeDeUsuario)
+    @Html.Hidden("CodUsuario", (string)ViewBag.CodUsuario)
     <!-- NOME -->
     <div class="form-group">
         <label class="novoDestinoEstadoCidade">Nome</label>
@@ -83,21 +83,21 @@
     </div>
 
     <!-- IMAGEM -->
-    @*<div class="imagem">
-            <div class="row">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>IMAGEM</span>
-                        <input type="file" name="Imagem" />
-                    </div>
+    <div class="imagem">
+        <div class="row">
+            <div class="file-field input-field">
+                <div class="btn amber darken-3">
+                    <span>IMAGEM</span>
+                    <input type="file" name="Imagem" />
+                </div>
 
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text"
-                               placeholder="Adicione um logo" />
-                    </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text"
+                            placeholder="Adicione um banner" />
                 </div>
             </div>
-        </div>*@
+        </div>
+    </div>
 
     <!-- PLACA -->
     <div class="selectPlaca">

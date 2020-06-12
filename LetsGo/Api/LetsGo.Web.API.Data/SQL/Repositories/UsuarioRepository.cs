@@ -1,8 +1,5 @@
 ﻿using LetsGo.Domain.Entities;
 using LetsGo.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LetsGo.Web.API.Data.SQL.Repositories
 {
@@ -13,12 +10,8 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
         {
             _conn = connection;
         }
-        public IEnumerable<Estado> GetEstados()
-        {
-            return _conn.Query<Estado>("SELECT CodEstado,Nome,Sigla FROM Estado");
-        }
 
-        public Usuario GetUsuario(string nomeDeUsuario)
+        public Usuario BuscarUsuario(string nomeDeUsuario)
         {
             var usuario = _conn.QueryScalar<Usuario>("SELECT CodUsuario, Nome,NomeDeUsuario FROM Usuario WHERE NomeDeUsuario = @NomeDeUsuario"
                                              ,new { nomeDeUsuario });
@@ -26,14 +19,13 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
             return usuario;
         }
 
-        public Usuario InsertUsuario(Usuario usuario)
+        public void InserirUsuario(Usuario usuario)
         {
             usuario.CodUsuario = _conn.QueryScalar<int>(@"INSERT INTO Usuario(Nome,NomeDeUsuario) VALUES(@Nome,@NomeDeUsuario)
                             
                                                           SELECT SCOPE_IDENTITY() AS CodUsuario"
                                                         ,new { usuario.Nome, usuario.NomeDeUsuario });
 
-            return usuario;
         }
     }
 }

@@ -13,8 +13,8 @@ BEGIN
 	CREATE TABLE Estado
 	(
 		CodEstado INT PRIMARY KEY IDENTITY,
-		Nome VARCHAR(100),
-		Sigla VARCHAR(2)
+		Nome VARCHAR(100) COLLATE SQL_Latin1_General_CP1_CI_AI,
+		Sigla VARCHAR(2) COLLATE SQL_Latin1_General_CP1_CI_AI
 	)
 END
 
@@ -24,12 +24,14 @@ BEGIN
 	(
 		CodEndereco INT PRIMARY KEY IDENTITY,
 		CodEstado INT,
-		Cidade VARCHAR(200),
+		Cidade VARCHAR(200) COLLATE SQL_Latin1_General_CP1_CI_AI,
 		Cep VARCHAR(10),
-		Rua VARCHAR(300),
-		Bairro VARCHAR(200),
-		Numero VARCHAR(50),
-		Complemento VARCHAR(200),
+		Rua VARCHAR(300) COLLATE SQL_Latin1_General_CP1_CI_AI,
+		Bairro VARCHAR(200) COLLATE SQL_Latin1_General_CP1_CI_AI,
+		Numero VARCHAR(50) COLLATE SQL_Latin1_General_CP1_CI_AI,
+		Complemento VARCHAR(200) COLLATE SQL_Latin1_General_CP1_CI_AI,
+		Latitude NUMERIC(13,10) NULL,
+		Longitude NUMERIC(13,10) NULL, 
 		CONSTRAINT FK_Estado FOREIGN KEY (CodEstado) REFERENCES Estado(CodEstado)
 	)
 END
@@ -41,9 +43,12 @@ BEGIN
 		CodRestaurante INT PRIMARY KEY IDENTITY,
 		CodUsuario INT,
 		CodEndereco INT,
-		Nome VARCHAR(200),
+		CodItemPlaca INT,
+		Nome VARCHAR(200) COLLATE SQL_Latin1_General_CP1_CI_AI,
+		NomeImagem VARCHAR(300),
 		CONSTRAINT FK_Usuario FOREIGN KEY (CodUsuario) REFERENCES Usuario(CodUsuario),
-		CONSTRAINT FK_Endereco FOREIGN KEY (CodEndereco) REFERENCES Endereco(CodEndereco)
+		CONSTRAINT FK_Endereco FOREIGN KEY (CodEndereco) REFERENCES Endereco(CodEndereco),
+		CONSTRAINT FK_Restaurante_ItemPlaca FOREIGN KEY (CodItemPlaca) REFERENCES ItemPlaca(CodItemPlaca)
 	)
 END
 
@@ -75,10 +80,8 @@ BEGIN
 	(
 		CodItemPlaca INT PRIMARY KEY IDENTITY,
 		CodPlaca INT,
-		CodRestaurante INT,
 		CodigoDeBarras VARCHAR(200),
-		CONSTRAINT FK_ItemPlaca_Placa FOREIGN KEY (CodPlaca) REFERENCES Placa(CodPlaca),
-		CONSTRAINT FK_ItemaPlaca_Restaurante FOREIGN KEY (CodRestaurante) REFERENCES Restaurante(CodRestaurante)
+		CONSTRAINT FK_ItemPlaca_Placa FOREIGN KEY (CodPlaca) REFERENCES Placa(CodPlaca)
 	)
 END
 
@@ -88,7 +91,7 @@ BEGIN
 	(
 		CodPino INT PRIMARY KEY IDENTITY,
 		CodPlaca INT,
-		Numero VARCHAR(100),
+		Numero VARCHAR(100) COLLATE SQL_Latin1_General_CP1_CI_AI,
 		Porta INT
 		CONSTRAINT FK_Placa FOREIGN KEY (CodPlaca) REFERENCES Placa(CodPlaca)
 	)

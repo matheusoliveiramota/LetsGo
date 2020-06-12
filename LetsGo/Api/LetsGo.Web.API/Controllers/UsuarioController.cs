@@ -13,29 +13,26 @@ namespace LetsGo.Web.API.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
-        private readonly IUsuarioService _service;
+        private readonly IUsuarioRepository _repository;
 
-        public UsuarioController(IUsuarioService placaService)
+        public UsuarioController(IUsuarioRepository repository)
         {
-            _service = placaService;
+            _repository = repository;
         }
 
         [HttpGet("{nomeDeUsuario}")]
         public ActionResult<Usuario> Get(string nomeDeUsuario)
         {
-            return Ok(_service.GetUsuario(nomeDeUsuario));
-        }
+            Usuario usuario = new Usuario(_repository);
 
-        [HttpGet("GetEstados")]
-        public ActionResult<IEnumerable<Estado>> GetEstados()
-        {
-            return Ok(_service.GetEstados());
+            return Ok(usuario.BuscarUsuario(nomeDeUsuario));
         }
 
         [HttpPost]
         public ActionResult<Usuario> InsertUsuario(Usuario usuario)
         {
-            return Ok(_service.InsertUsuario(usuario));
+            usuario.InserirUsuario(_repository);
+            return Ok(usuario);
         }
     }
 }

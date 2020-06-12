@@ -7,28 +7,14 @@
 
 <div class="error-page">
     <div class="page-header">
-        <h1>Erro</h1>
+        <h1>Usuário não autenticado</h1>
     </div>
 
     <div class="row">
         <div class="col-sm-6">
-            <div class="alert alert-danger">
-                Desculpe, houve um erro
-
-                @if (error != null)
-                {
-                    <strong>
-                        <em>
-                            : @error
-                        </em>
-                    </strong>
-                }
+            <p>Bem vindo ao Servidor de Autenticação!</p>
+            <div>
+                Clique @Html.ActionLink("aqui","RedirectMvc","Home") para retornar para a aplicação Let's Go e se autenticar.
             </div>
-
-            @if (request_id != null)
-            {
-                <div class="request-id">Request Id: @request_id</div>
-            }
-        </div>
     </div>
 </div>

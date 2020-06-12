@@ -18,7 +18,7 @@ namespace LetsGo.Web.UI.Services
             
             var response = ChamadaApiGET("/api/Usuario/" + nomeDeUsuario);
             
-            if(response != null)
+            if(response != null && response != "")
             {
                 usuario = JsonConvert.DeserializeObject<Usuario>(response);
             }
@@ -30,7 +30,7 @@ namespace LetsGo.Web.UI.Services
         {
             IEnumerable<Estado> estados = null;
 
-            var response = ChamadaApiGET("/api/Usuario/GetEstados");
+            var response = ChamadaApiGET("/api/Localizacao/GetEstados");
 
             if (response != null)
             {

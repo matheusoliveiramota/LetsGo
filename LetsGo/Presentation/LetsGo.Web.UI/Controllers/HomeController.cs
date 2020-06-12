@@ -67,7 +67,7 @@ namespace LetsGo.Web.UI.Controllers
             var placa = _placaService.Get();
             var estados = _usuarioService.GetEstados();
 
-            ViewBag.NomeDeUsuario = usuario.NomeDeUsuario;
+            ViewBag.CodUsuario = usuario.CodUsuario.ToString();
             ViewBag.Placa = placa;
             ViewBag.Estados = estados;
 

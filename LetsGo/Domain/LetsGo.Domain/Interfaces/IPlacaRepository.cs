@@ -8,9 +8,9 @@ namespace LetsGo.Domain.Interfaces
 {
     public interface IPlacaRepository
     {
-        IEnumerable<Placa> GetPlacas();
-        short UpdateEstadoMesa(int codRestaurante, short porta, short codEstadoMesa);
-        void InsertLogMesaEstado(int codRestaurante, short porta, short codEstadoMesa);
-        GetEstadoMesaResponse GetEstadoMesa(int codRestaurante, int porta);
+        IEnumerable<Placa> BuscarPlacas();
+        short AtualizarEstadoMesa(int codRestaurante, short porta, short codEstadoMesa);
+        void InserirLogMesaEstado(int codRestaurante, short porta, short codEstadoMesa);
+        GetEstadoMesaResponse BuscarEstadoMesa(int codRestaurante, short porta);
     }
 }

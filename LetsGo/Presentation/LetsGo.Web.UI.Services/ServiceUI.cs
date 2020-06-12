@@ -8,7 +8,7 @@ namespace LetsGo.Web.UI.Services
 {
     public class ServiceUI
     {
-        private readonly IConfiguration _configuration;
+        protected readonly IConfiguration _configuration;
         public ServiceUI(IConfiguration configuration)
         {
             _configuration = configuration;

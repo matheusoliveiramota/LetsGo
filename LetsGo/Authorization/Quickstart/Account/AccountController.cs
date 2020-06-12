@@ -69,8 +69,10 @@ namespace IdentityServer4.Quickstart.UI
         {
             if (ModelState.IsValid)
             {
-                // validate username/password against in-memory store
-                if (_users.ValidateCredentials(model.Username, model.Password))
+                // validate username/password against in-memory stores
+                var usuarioOk = _users.ValidateCredentials(model.Username, model.Password);
+                
+                if (usuarioOk)
                 {
                     AuthenticationProperties props = null;
                     // only set explicit expiration here if persistent. 

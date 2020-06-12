@@ -16,11 +16,11 @@ namespace LetsGo.Web.API.Services
             _repository = placaRepository;
         }
 
-        public GetEstadoMesaResponse GetEstadoMesa(int codRestaurante, int porta)
+        public GetEstadoMesaResponse GetEstadoMesa(int codRestaurante, short porta)
         {
-            var response = _repository.GetEstadoMesa(codRestaurante, porta);
+            var response = _repository.BuscarEstadoMesa(codRestaurante, porta);
             
-            if(response.CodEstadoMesa == 3) // Não monitorado
+            if(response != null && response.CodEstadoMesa == 3) // Não monitorado
             {
                 response.CodEstadoMesa = 1;
             }
@@ -28,15 +28,10 @@ namespace LetsGo.Web.API.Services
             return response;
         }
 
-        public IEnumerable<Placa> GetPlacas()
-        {
-            return _repository.GetPlacas();
-        }
-
         public short PostEstadoMesa(PostEstadoMesaRequest request)
         {
-            var response = _repository.UpdateEstadoMesa(request.CodRestaurante,request.Porta,request.CodEstadoMesa);
-            _repository.InsertLogMesaEstado(request.CodRestaurante,request.Porta,request.CodEstadoMesa);
+            var response = _repository.AtualizarEstadoMesa(request.CodRestaurante,request.Porta,request.CodEstadoMesa);
+            _repository.InserirLogMesaEstado(request.CodRestaurante,request.Porta,request.CodEstadoMesa);
 
             return response;
         }

@@ -7,8 +7,7 @@ namespace LetsGo.Domain.Interfaces
 {
     public interface IUsuarioRepository
     {
-        Usuario GetUsuario(string nomeDeUsuario);
-        Usuario InsertUsuario(Usuario usuario);
-        IEnumerable<Estado> GetEstados();
+        Usuario BuscarUsuario(string nomeDeUsuario);
+        void InserirUsuario(Usuario usuario);
     }
 }

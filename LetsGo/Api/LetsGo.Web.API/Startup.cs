@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Unity.Injection;
+using LetsGo.Web.API.Controllers;
 
 namespace LetsGo.Web.API
 {
@@ -38,6 +39,8 @@ namespace LetsGo.Web.API
         {
             services.AddControllers();
 
+            services.Configure<RestauranteController>(Configuration);
+
             services.AddScoped<IUsuarioRepository, UsuarioRepository>(x =>
                 new UsuarioRepository(
                     new DataConnection(Configuration)
@@ -53,7 +56,11 @@ namespace LetsGo.Web.API
                     new DataConnection(Configuration)
                 )
             );
-            services.AddScoped<IUsuarioService, UsuarioService>();
+            services.AddScoped<ILocalizacaoRepository, LocalizacaoRepository>(x =>
+                new LocalizacaoRepository(
+                    new DataConnection(Configuration)
+                )
+            );
             services.AddScoped<IRestauranteService, RestauranteService>();
             services.AddScoped<IPlacaService, PlacaService>();
         }

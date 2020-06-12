@@ -16,7 +16,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
             _conn = connection;
         }
 
-        public GetEstadoMesaResponse GetEstadoMesa(int codRestaurante, int porta)
+        public GetEstadoMesaResponse BuscarEstadoMesa(int codRestaurante, short porta)
         {
            var response = _conn.QueryScalar<GetEstadoMesaResponse>(@"SELECT P.Porta,M.CodestadoMesa
                                                                             FROM Mesa	M
@@ -30,7 +30,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
             return response;
         }
 
-        public IEnumerable<Placa> GetPlacas()
+        public IEnumerable<Placa> BuscarPlacas()
         {
             IEnumerable<Placa> placas = _conn.Query<Placa>("SELECT CodPlaca,Nome,Descricao FROM Placa");
             foreach(var placa in placas)
@@ -40,7 +40,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
             return placas;
         }
 
-        public void InsertLogMesaEstado(int codRestaurante, short porta, short codEstadoMesa)
+        public void InserirLogMesaEstado(int codRestaurante, short porta, short codEstadoMesa)
         {
             _conn.Execute(@"INSERT INTO LogMesaEstado(CodMesa,CodEstadoMesa,Data)
                             SELECT M.CodMesa,@CodEstadoMesa,GETDATE()
@@ -55,7 +55,7 @@ namespace LetsGo.Web.API.Data.SQL.Repositories
             });
         }
 
-        public short UpdateEstadoMesa(int codRestaurante, short porta, short codEstadoMesa)
+        public short AtualizarEstadoMesa(int codRestaurante, short porta, short codEstadoMesa)
         {
             _conn.Execute(@"UPDATE M
                                 SET M.CodEstadoMesa = @CodEstadoMesa,

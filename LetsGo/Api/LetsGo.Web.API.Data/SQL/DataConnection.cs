@@ -20,13 +20,13 @@ namespace LetsGo.Web.API.Data.SQL
             _conn = new SqlConnection(connectionString);
         }
 
-        void OpenConnection()
+        private void OpenConnection()
         {
             if (_conn.State != ConnectionState.Open)
                 _conn.Open();
         }
 
-        void CloseConnection()
+        private void CloseConnection()
         {
             if (_conn.State != ConnectionState.Closed)
                 _conn.Close();
@@ -48,17 +48,6 @@ namespace LetsGo.Web.API.Data.SQL
             OpenConnection();
 
             var ret = _conn.Query<T>(sqlQuery, parameters, commandTimeout: commandTimeout ?? _commandTimeoutDefault);
-
-            CloseConnection();
-
-            return ret;
-        }
-
-        public T1 QuerySingle<T1, T2>(string sqlQuery, Func<T1, T2, T1> mapping, object parameters = null, string splitOn = null)
-        {
-            OpenConnection();
-
-            var ret = _conn.Query(sqlQuery, mapping, parameters, splitOn: splitOn ?? "Id").SingleOrDefault();
 
             CloseConnection();
 

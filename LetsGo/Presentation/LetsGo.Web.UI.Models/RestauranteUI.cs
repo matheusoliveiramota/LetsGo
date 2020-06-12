@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -43,9 +44,11 @@ namespace LetsGo.Web.UI.Models
         public int CodPlaca { get; set; }
 
         public IList<int> Pinos { get; set; }
-        public string NomeDeUsuario { get; set; } 
 
-        //public FileExtensionsAttribute Imagem { get; set; }
+        public string CodUsuario { get; set; }
+
+        [Required(ErrorMessage = "Escolha uma imagem !")]
+        public IFormFile Imagem { get; set; }
     }
 }
 
